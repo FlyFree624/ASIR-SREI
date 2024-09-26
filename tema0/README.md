@@ -7,3 +7,5 @@ tan solo hay que poner una imagen de algo y cargar el servidor donde este la ima
 
 ![](imagenes/Captura.png)
 
+pero si es tuyo propio tan solo poner localhost o 127.0.0.1 y el numero de puerto
+

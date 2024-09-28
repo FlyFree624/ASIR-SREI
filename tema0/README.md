@@ -77,6 +77,39 @@ text/javascript:
 
 Indica que el contenido es un archivo JavaScript.
 
+ejercicio 2
+
+¿Diferencias entre udp y tcp?
+
+el tcp: establece una conexión antes de transmitir datos
+el udp: No establece una conexión previa antes de enviar datos
+
+¿Qué aplicaciones usan tcp?  
+http: paginas web
+smtp: es un servicio de envio de correo que envia entre cliente y servidor y entre servidores tambien
+pop: es un servicio de envio de correo en lo que los datos se guardan en el servidor se borran del servidor cuando el usuario los descarga
+imap: es un servicio de envio de correo en lo que los datos se guardan en el servidor osea que permanecen en el servidor
+ssh: es un servicio de conexion remota 
+
+¿Qué aplicaciones usan udp?
+
+Videojuegos en Línea
+Servicios de Streaming
+Aplicaciones de VoIP
+Aplicaciones de Mensajería Instantánea
+
+¿Qué capa almacena el puerto?
+
+en la 4
+
+¿Qué capa almacena la dirección IP?
+
+en la 3
+
+¿Qué es three-way handshake?
+
+ es un procedimiento crítico en la creación de conexiones TCP, asegurando que ambas partes están listas para la comunicación y estableciendo un marco confiable para el intercambio de datos
+
 
 ejercicio 5
 

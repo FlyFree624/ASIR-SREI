@@ -107,13 +107,35 @@ en la 4
 en la 3
 
 ¿Qué es three-way handshake?
+es un procedimiento crítico en la creación de conexiones TCP, asegurando que ambas partes están listas para la comunicación y estableciendo un marco confiable para el intercambio de datos.
 
- es un procedimiento crítico en la creación de conexiones TCP, asegurando que ambas partes están listas para la comunicación y estableciendo un marco confiable para el intercambio de datos
+ ejercicio 4
+el comando curl es basicamente un descargador tan solo hay que poner curl y la url de la pagina y se te descargan los datos de la pagina
 
+5 usos de curl:
+
+Obtener el contenido de una página web
+curl www.dfhd.com
+
+Descargar un archivo:
+
+curl -O www.dfhd.com
+
+Descargar muchos archivo:
+
+curl -O www.dfhd.com -O fdf.com descarga varios archivos separando las url
+
+Realizar una solicitud POST: Para enviar datos a un servidor mediante un formulario
+
+curl -d www.dfhd.com
+
+Seguir redireccionamientos
+
+curl -L www.dfhd.com
 
 	ejercicio 5
  
-a
+ 
  	python -m http.server 8000
 
  para ejecutar un servidor en python solo debes ponerlo donde tienes tu archivo y lanzarlo al terminar tan solo debes colo car la ip de tu compañero en la url o si es tuys poner localhost o 127.0.0.1 y tambien es importante poner el puerto donde lo hayas llamado

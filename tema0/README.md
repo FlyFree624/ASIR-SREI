@@ -80,7 +80,7 @@ Indica que el contenido es un archivo JavaScript.
 
 ejercicio 5
 
- python -m http.server 8000
+ 	python -m http.server 8000
 
  para ejecutar un servidor en python solo debes ponerlo donde tienes tu archivo y lanzarlo al terminar tan solo debes colo car la ip de tu compañero en la url o si es tuys poner localhost o 127.0.0.1
 

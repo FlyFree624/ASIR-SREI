@@ -77,7 +77,7 @@ text/javascript:
 
 Indica que el contenido es un archivo JavaScript.
 
-ejercicio 2
+	ejercicio 2
 
 ¿Diferencias entre udp y tcp?
 
@@ -111,7 +111,7 @@ en la 3
  es un procedimiento crítico en la creación de conexiones TCP, asegurando que ambas partes están listas para la comunicación y estableciendo un marco confiable para el intercambio de datos
 
 
-ejercicio 5
+	ejercicio 5
 
  	python -m http.server 8000
 

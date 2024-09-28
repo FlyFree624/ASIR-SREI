@@ -20,5 +20,6 @@ Breve descripción 0.2
 …
 …
 
-
+| Encabezado 1  | Encabezado 2  | Encabezado 3  |
+| ------------- | ------------- | ------------- |
 

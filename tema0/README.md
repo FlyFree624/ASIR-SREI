@@ -84,7 +84,7 @@ ejercicio 5
 
  para ejecutar un servidor en python solo debes ponerlo donde tienes tu archivo y lanzarlo al terminar tan solo debes colo car la ip de tu compañero en la url o si es tuys poner localhost o 127.0.0.1
 
- ![]()
+ ![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/Captura.png)
 
 
 

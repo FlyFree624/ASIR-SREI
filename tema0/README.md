@@ -109,7 +109,8 @@ en la 3
 ¿Qué es three-way handshake?
 es un procedimiento crítico en la creación de conexiones TCP, asegurando que ambas partes están listas para la comunicación y estableciendo un marco confiable para el intercambio de datos.
 
- ejercicio 4
+ 	ejercicio 4
+ 
 el comando curl es basicamente un descargador tan solo hay que poner curl y la url de la pagina y se te descargan los datos de la pagina
 
 5 usos de curl:

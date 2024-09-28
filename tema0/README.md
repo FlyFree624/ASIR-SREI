@@ -1,4 +1,6 @@
-ejercicio 1
+``ejercicio 1``
+
+
 
 ¿Quién, dónde y cuándo se crea el primer servidor web?
 
@@ -74,4 +76,10 @@ Indica que el contenido es una hoja de estilos CSS.
 text/javascript:
 
 Indica que el contenido es un archivo JavaScript.
+
+
+``ejercicio 5``
+python -m http.server 8000
+`` ``
+
 

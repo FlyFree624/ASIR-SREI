@@ -113,7 +113,7 @@ en la 3
 
 	ejercicio 5
  
-
+a
  	python -m http.server 8000
 
  para ejecutar un servidor en python solo debes ponerlo donde tienes tu archivo y lanzarlo al terminar tan solo debes colo car la ip de tu compañero en la url o si es tuys poner localhost o 127.0.0.1 y tambien es importante poner el puerto donde lo hayas llamado

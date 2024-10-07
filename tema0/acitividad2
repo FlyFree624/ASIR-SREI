@@ -9,10 +9,15 @@ En /etc/hosts/ poner la ip y al lado el marisma.intranet
 Cambia la directiva “ServerTokens” para mostrar el nombre del producto.
 
 Haz que se visualice el pie de página de Apache en tu navegador
+
+directiva sever Sigmtme
 	
 Crea un directorio “prueba” y otro directorio “prueba2”. Incluye un par de páginas en cada una de ellas.
+en DoccumentRoot que esta en /var/www/tml
 	
 Redirecciona el contenido de la carpeta “prueba” hacia “prueba2”
+en redirect directive
+ 
 	
 Es posible redireccionar tan solo una página en lugar de toda la carpeta. Pruébalo.
 	

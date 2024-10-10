@@ -10,3 +10,13 @@ server tokens da el nombre, version, que se esta ejecutando,
 buscar en la pagina de apache y ver la directtiva que corresponde
 
 se modifica poniendo en el fichero de configuracion (/etc/apache2/ports.conf) y poner la directiva ahu, luego, apagar, un apachectl configstest y arrancar
+
+para redireccionar paginas:
+
+en el Documentroot crear los directorios que es donde se crean los directorios para servir a apache
+ en nuestro caso es /var/www/html crear el fichero hay
+la redireccion se puede acer en server config, virtualhost, directory, .htacces
+
+me meto en server config y escribo
+Redirect "[la pagina mia]" "[la url a laque yo la quiero mandar]"
+

@@ -1,5 +1,5 @@
 **apuntes**
-
+directorio de configuracion: /etc/apache2/apache2.conf
 arrancar apache: sudo service apache2 start
 reiniciar apache: sudo service apache2 restart
 apagar apache: sudo service apache2 stop
@@ -20,3 +20,4 @@ la redireccion se puede acer en server config, virtualhost, directory, .htacces
 me meto en server config y escribo
 Redirect "[la pagina mia]" "[la url a laque yo la quiero mandar]"
 
+directiva: UserDir en /etc/apache2/apache2.conf escribo UserDir y la pagina mia

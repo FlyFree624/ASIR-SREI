@@ -20,4 +20,14 @@ la redireccion se puede acer en server config, virtualhost, directory, .htacces
 me meto en server config y escribo
 Redirect "[la pagina mia]" "[la url a laque yo la quiero mandar]"
 
-directiva: UserDir en /etc/apache2/apache2.conf escribo UserDir y la pagina mia
+directiva: UserDir  pero hay que activar el user mod
+
+en /etc/apache2/apache2.conf escribo UserDir y la pagina mia
+
+para activar el user mod:
+
+escibir sudo a2enmod userdir
+
+apachectl configstest
+
+

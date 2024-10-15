@@ -30,4 +30,4 @@ escibir sudo a2enmod userdir
 
 apachectl configstest
 
-
+los ficheros log estan ev /var/log/apache2

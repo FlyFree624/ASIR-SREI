@@ -1,4 +1,5 @@
 Crea un script que añada un puerto de escucha en el fichero de configuración de Apache. El puerto se recibirá como parámetro en la llamada y se comprobará que no esté ya presente en el fichero de configuración.
+
 ![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/apache.png)
 
 Crea un script que añada un nombre de dominio y una ip al fichero hosts. Debemos comprobar que no existe dicho dominio en el fichero hosts

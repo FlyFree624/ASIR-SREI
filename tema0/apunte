@@ -31,3 +31,8 @@ escibir sudo a2enmod userdir
 apachectl configstest
 
 los ficheros log estan ev /var/log/apache2
+para asignar directivas:
+alias: "imagen"  /home/usr/images
+poner <Directory "^[la ruta la que he asignado antes /home/usr/images]">
+                          Require all grauted
+</Directory>

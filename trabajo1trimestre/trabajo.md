@@ -114,6 +114,32 @@ pegar esta directiva en el archivo creado
     ErrorLog ${APACHE_LOG_DIR}/departamentos.centro.intranet_error.log
     CustomLog ${APACHE_LOG_DIR}/departamentos.centro.intranet_access.log combined
 </VirtualHost>
+
 ![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/py.png)
+
+habilitamos los dos:
+
+sudo a2ensite centro.intranet.conf
+sudo a2ensite departamentos.centro.intranet.conf
+
+habilitamos modulos
+
+sudo a2enmod rewrite
+sudo a2enmod wsgi
+
+reiniciamos apache
+
+sudo systemctl restart apache2
+
+ahora en el navegador poner 
+http://centro.intranet para acceder a WordPress.
+
+http://departamentos.centro.intranet para acceder a tu aplicación Python.
+
+**activar wgsi**
+
+instalar wsgi:
+
+sudo apt install libapache2-mod-wsgi-py3
 
 

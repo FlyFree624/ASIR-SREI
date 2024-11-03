@@ -236,4 +236,7 @@ editar el etc hosts y poner
 instalar la herramienta htpasswd
 
 sudo apt install apache2-utils
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/hta.png)
+crear el archivo .htpasswd para almacenar nombres de usuarios
+sudo htpasswd -c /etc/apache2/.htpasswd usuario
 

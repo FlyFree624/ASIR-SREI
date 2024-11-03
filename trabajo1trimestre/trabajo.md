@@ -18,6 +18,14 @@ Para reiniciar Apache:
 
 sudo systemctl restart apache2
 
+configuración de los dominios y la instalación de WordPress y la aplicación en Python:
+
+sudo nano /etc/hosts y una vez dentro agrego lo siguiente
+
+127.0.0.1 centro.intranet
+127.0.0.1 departamentos.centro.intranet
+
+
 
 
 

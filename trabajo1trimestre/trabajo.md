@@ -96,4 +96,23 @@ y pegar esta directiva en el archivo
     CustomLog ${APACHE_LOG_DIR}/centro.intranet_access.log combined
 </VirtualHost>
 
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/dire.png)
+
+(python)
+en una bash pegar el siguiente codigo
+sudo nano /etc/apache2/sites-available/departamentos.centro.intranet.conf
+pegar esta directiva en el archivo creado
+<VirtualHost *:80>
+    ServerName departamentos.centro.intranet
+    DocumentRoot /var/www/departamentos.centro.intranet
+
+    WSGIScriptAlias / /var/www/departamentos.centro.intranet/app.wsgi
+    <Directory /var/www/departamentos.centro.intranet>
+        Require all granted
+    </Directory>
+
+    ErrorLog ${APACHE_LOG_DIR}/departamentos.centro.intranet_error.log
+    CustomLog ${APACHE_LOG_DIR}/departamentos.centro.intranet_access.log combined
+</VirtualHost>
+
 

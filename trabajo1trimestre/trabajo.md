@@ -114,5 +114,6 @@ pegar esta directiva en el archivo creado
     ErrorLog ${APACHE_LOG_DIR}/departamentos.centro.intranet_error.log
     CustomLog ${APACHE_LOG_DIR}/departamentos.centro.intranet_access.log combined
 </VirtualHost>
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/py.png)
 
 

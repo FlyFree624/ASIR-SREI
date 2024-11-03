@@ -252,12 +252,22 @@ y agregar esta directiva
     Require valid-user
 </Directory>
 
-![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/finpl.png)
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/cf.png)
 
 reiniciar apache
 
 sudo systemctl restart apache2
  y cuando pongamos en el navegador http://mi_aplicacion.local aparecera el nombre y password intriducido antes es usuario las dos
+
+ instalar awast
+
+ sudo apt install awstats
+
+ creo un fichero de configuracion para el dominio mio
+
+ sudo cp /etc/awstats/wwwroot/cgi-bin/cgi-bin/awstats.model.conf /etc/awstats/wwwroot/cgi-bin/cgi-bin/awstats.mi_aplicacion.conf
+
+ 
  
 
 

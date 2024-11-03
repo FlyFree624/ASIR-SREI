@@ -66,7 +66,34 @@ accedemos a mariadb:
 
 sudo mariadb -u root -p
 
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/ma.png)
 
+una vez dentro de mariadb creamos la base de datos para wordpress:
 
+CREATE DATABASE wordpress;
+CREATE USER 'wordpress_user'@'localhost' IDENTIFIED BY 'password';
+GRANT ALL PRIVILEGES ON wordpress.* TO 'wordpress_user'@'localhost';
+FLUSH PRIVILEGES;
+EXIT;
+
+Crear Archivos de Configuración de Apache:
+(wordpress)
+
+ejecutar en una bash esto sudo nano /etc/apache2/sites-available/centro.intranet.conf
+
+y pegar esta directiva en el archivo 
+
+<VirtualHost *:80>
+    ServerName centro.intranet
+    DocumentRoot /var/www/centro.intranet
+
+    <Directory /var/www/centro.intranet>
+        AllowOverride All
+        Require all granted
+    </Directory>
+
+    ErrorLog ${APACHE_LOG_DIR}/centro.intranet_error.log
+    CustomLog ${APACHE_LOG_DIR}/centro.intranet_access.log combined
+</VirtualHost>
 
 

@@ -191,3 +191,39 @@ sys.path.insert(0, "/var/www/mi_aplicacion")
 
 from app import app as application
 
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/win.png)
+
+Configurar Apache para Servir la Aplicación
+
+Crear un Archivo de Configuración para el VirtualHost:
+
+sudo nano /etc/apache2/sites-available/mi_aplicacion.conf
+
+y dentro poner la siguiente directiva
+
+<VirtualHost *:80>
+    ServerName mi_aplicacion.local  # Cambia esto si necesitas otro nombre
+    DocumentRoot /var/www/mi_aplicacion
+
+    WSGIScriptAlias / /var/www/mi_aplicacion/app.wsgi
+    
+    <Directory /var/www/mi_aplicacion>
+        Require all granted
+    </Directory>
+
+    ErrorLog ${APACHE_LOG_DIR}/mi_aplicacion_error.log
+    CustomLog ${APACHE_LOG_DIR}/mi_aplicacion_access.log combined
+</VirtualHost>
+
+Habilito el sitio:
+sudo a2ensite mi_aplicacion.conf
+
+reinicio apache:
+
+sudo systemctl restart apache2
+
+editar el etc hosts y poner 
+
+127.0.0.1 mi_aplicacion.local
+
+

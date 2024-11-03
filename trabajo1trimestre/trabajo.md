@@ -239,4 +239,18 @@ sudo apt install apache2-utils
 ![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/hta.png)
 crear el archivo .htpasswd para almacenar nombres de usuarios
 sudo htpasswd -c /etc/apache2/.htpasswd usuario
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/usuario.png)
+configuramos la autenticación del archivo apache
+
+sudo nano /etc/apache2/sites-available/mi_aplicacion.conf
+
+y agregar esta directiva
+<Directory /var/www/mi_aplicacion>
+    AuthType Basic
+    AuthName "Restricted Access"
+    AuthUserFile /etc/apache2/.htpasswd
+    Require valid-user
+</Directory>
+
+
 

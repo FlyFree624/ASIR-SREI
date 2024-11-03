@@ -252,7 +252,7 @@ y agregar esta directiva
     Require valid-user
 </Directory>
 
-![]()
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/polon.png)
 
 reiniciar apache
 

@@ -24,7 +24,14 @@ sudo nano /etc/hosts y una vez dentro agrego lo siguiente
 
 127.0.0.1 centro.intranet
 127.0.0.1 departamentos.centro.intranet
-![]()
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/hosts.png)
+
+creo carpetas para guardar cada sitio:
+
+sudo mkdir -p /var/www/centro.intranet
+sudo mkdir -p /var/www/departamentos.centro.intranet
+
+
 
 
 

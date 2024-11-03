@@ -252,5 +252,12 @@ y agregar esta directiva
     Require valid-user
 </Directory>
 
+![]()
+
+reiniciar apache
+
+sudo systemctl restart apache2
+ y cuando pongamos en el navegador http://mi_aplicacion.local aparecera el nombre y password intriducido antes es usuario las dos
+ 
 
 

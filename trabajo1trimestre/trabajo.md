@@ -98,6 +98,8 @@ y pegar esta directiva en el archivo
 
 ![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/dire.png)
 
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/wp.png)
+
 (python)
 en una bash pegar el siguiente codigo
 sudo nano /etc/apache2/sites-available/departamentos.centro.intranet.conf

@@ -36,13 +36,22 @@ sudo mkdir -p /var/www/departamentos.centro.intranet
 Instalar WordPress para centro.intranet
 
 cd /tmp
+
 wget https://wordpress.org/latest.tar.gz
+
 tar -xzf latest.tar.gz
+
 sudo mv wordpress/* /var/www/centro.intranet/
 
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/Captura%20de%20pantalla%202024-11-03%20160241.png)
 
+asigno permisos a los directorios creados
 
+sudo chown -R www-data:www-data /var/www/centro.intranet
 
+sudo chmod -R 755 /var/www/centro.intranet
+
+hay que instalar una base de datos escojo MARIADB ya que estoy usando kali y no admite mysql pero es totalmente compatible
 
 
 

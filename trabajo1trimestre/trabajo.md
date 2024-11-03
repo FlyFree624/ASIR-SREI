@@ -13,7 +13,8 @@ detener Apache:
 
 sudo systemctl stop apache2
 
-`Para reiniciar Apache:`
+Para reiniciar Apache:
+
 sudo systemctl restart apache2
 
 

@@ -231,4 +231,9 @@ editar el etc hosts y poner
 ![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/bien.png)
 
 
+**proteger el acceso a la aplicación python mediante autenticación**
+
+instalar la herramienta htpasswd
+
+sudo apt install apache2-utils
 

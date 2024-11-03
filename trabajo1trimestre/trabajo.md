@@ -1,4 +1,4 @@
-**Instalación del servidor web apache. Usaremos dos dominios mediante el archivo hosts: centro.intranet y departamentos.centro.intranet. 
+![image](https://github.com/user-attachments/assets/b0d09e2c-0de4-471d-856e-38d1677fb064)**Instalación del servidor web apache. Usaremos dos dominios mediante el archivo hosts: centro.intranet y departamentos.centro.intranet. 
 El primero servirá el contenido mediante wordpress y el segundo una aplicación en python**
 
 Instalar Apache:
@@ -142,4 +142,52 @@ instalar wsgi:
 
 sudo apt install libapache2-mod-wsgi-py3
 
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/wsgi.png)
+
+habilitarlo
+
+sudo a2enmod wsgi
+
+reiniciar apache:
+
+sudo systemctl restart apache2
+
+Instalar Flask:
+
+sudo apt install python3-pip
+pip3 install Flask
+
+crear una carpeta para guardar la aplicaciones
+
+sudo mkdir /var/www/mi_aplicacion
+
+crear una aplicacion aqui
+sudo nano /var/www/mi_aplicacion/app.py
+
+dentro de app.py
+
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route('/')
+def home():
+    return "¡Hola, esta es mi primera aplicación en WSGI!"
+
+if __name__ == '__main__':
+    app.run()
+    
+crear un archivo wgsi para que Apache pueda manejar la aplicación
+
+sudo nano /var/www/mi_aplicacion/app.wsgi
+
+agrego esto dentro del wsgi
+
+import sys
+import logging
+
+logging.basicConfig(stream=sys.stderr)
+sys.path.insert(0, "/var/www/mi_aplicacion")
+
+from app import app as application
 

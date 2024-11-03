@@ -226,4 +226,7 @@ editar el etc hosts y poner
 
 127.0.0.1 mi_aplicacion.local
 
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/bien.png)
+
+
 

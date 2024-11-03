@@ -4,6 +4,7 @@ El primero servirá el contenido mediante wordpress y el segundo una aplicación
 Instalar Apache:
 
 sudo apt install apache2 -y
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/installap.png)
 
 Iniciar el servicio de Apache:
 

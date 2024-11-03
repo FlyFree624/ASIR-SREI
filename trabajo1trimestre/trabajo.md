@@ -31,6 +31,16 @@ creo carpetas para guardar cada sitio:
 sudo mkdir -p /var/www/centro.intranet
 sudo mkdir -p /var/www/departamentos.centro.intranet
 
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/carpeta.png)
+
+Instalar WordPress para centro.intranet
+
+cd /tmp
+wget https://wordpress.org/latest.tar.gz
+tar -xzf latest.tar.gz
+sudo mv wordpress/* /var/www/centro.intranet/
+
+
 
 
 

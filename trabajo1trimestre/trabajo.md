@@ -24,7 +24,7 @@ sudo nano /etc/hosts y una vez dentro agrego lo siguiente
 
 127.0.0.1 centro.intranet
 127.0.0.1 departamentos.centro.intranet
-
+![]()
 
 
 

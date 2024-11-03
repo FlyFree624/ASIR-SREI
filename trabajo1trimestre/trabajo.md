@@ -57,6 +57,16 @@ sudo apt install mariadb-server --fix-missing
 
 ![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/mariadb.png)
 
+para iniciar el servicio de mariadb:
+
+sudo systemctl start mariadb
+sudo systemctl enable mariadb
+
+accedemos a mariadb:
+
+sudo mariadb -u root -p
+
+
 
 
 

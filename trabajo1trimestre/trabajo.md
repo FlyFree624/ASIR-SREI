@@ -53,5 +53,10 @@ sudo chmod -R 755 /var/www/centro.intranet
 
 hay que instalar una base de datos escojo MARIADB ya que estoy usando kali y no admite mysql pero es totalmente compatible
 
+sudo apt install mariadb-server --fix-missing
+
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/mariadb.png)
+
+
 
 

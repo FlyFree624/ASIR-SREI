@@ -283,6 +283,7 @@ sudo systemctl restart apache2
 **LogFile: la ruta al archivo de log que AWStats analizará** es: /var/log/apache2/access.log
 **DirData: el directorio donde se guardarán los datos de AWStats** es: /var/lib/awstats
 
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/sitedomain.png)
 
 
 

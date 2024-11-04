@@ -297,5 +297,10 @@ instalar php
 
  sudo apt install php libapache2-mod-php php-mysql php-xml php-mbstring php-curl php-zip php-gd
  
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/php.png)
 
+activar el modulo poner estos comandos:
+  sudo a2enmod php hay que ver la version que tienes en mi caso es la 8.2 entonces es sudo a2enmod php8.2
+
+  no olvidar reiniciar apache: sudo systemctl restart apache2
 

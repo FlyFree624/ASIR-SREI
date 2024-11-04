@@ -4,7 +4,7 @@ arrancar apache: sudo service apache2 start
 reiniciar apache: sudo service apache2 restart
 apagar apache: sudo service apache2 stop
 
-comprobar que los ficheros de configuracion estan mal escritos siempre hacer: apachectl configstest
+comprobar que los ficheros de configuracion estan mal escritos siempre hacer: sudo apache2ctl configtest
 
 server tokens da el nombre, version, que se esta ejecutando, 
 buscar en la pagina de apache y ver la directtiva que corresponde

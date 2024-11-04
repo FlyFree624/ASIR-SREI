@@ -292,8 +292,10 @@ sudo systemctl restart apache2
 para actualizar awast despues de los cambios:
 
 sudo perl /usr/lib/cgi-bin/awstats.pl -config=mi_aplicacion -update
+
 instalar php
 
+ sudo apt install php libapache2-mod-php php-mysql php-xml php-mbstring php-curl php-zip php-gd
  
 
 

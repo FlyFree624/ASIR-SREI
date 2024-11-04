@@ -287,7 +287,7 @@ sudo systemctl restart apache2
 
 ![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/logfiles.png)
 
-
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/dirdata.png)
 
 para actualizar awast despues de los cambios:
 

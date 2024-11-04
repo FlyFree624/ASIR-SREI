@@ -259,15 +259,39 @@ reiniciar apache
 sudo systemctl restart apache2
  y cuando pongamos en el navegador http://mi_aplicacion.local aparecera el nombre y password intriducido antes es usuario las dos
 
- instalar awast
+ **instalar awast**
 
  sudo apt install awstats
 
- creo un fichero de configuracion para el dominio mio
-
- sudo cp /etc/awstats/wwwroot/cgi-bin/cgi-bin/awstats.model.conf /etc/awstats/wwwroot/cgi-bin/cgi-bin/awstats.mi_aplicacion.conf
-
+ creo las carpetas donde van aguardarse:
+ sudo mkdir -p /etc/awstats/wwwroot/cgi-bin/
  
+
+ copio el fichero de configuracion para el dominio mio
+
+ sudo cp /etc/awstats/awstats.conf /etc/awstats/wwwroot/cgi-bin/awstats.mi_aplicacion.conf
+
+
+ edito el fichero de configuracion:
+
+ sudo nano /etc/awstats/wwwroot/cgi-bin/awstats.mi_aplicacion.conf
+ 
+ al editar el fichero de configuración:
+ tener en cuenta que hay que modificar estas opciones
+
+**SiteDomain: el dominio de la aplicación.** es: mi_aplicacion.local/
+**LogFile: la ruta al archivo de log que AWStats analizará** es: /var/log/apache2/access.log
+**DirData: el directorio donde se guardarán los datos de AWStats** es: /var/lib/awstats
+
+
+
+
+
+para actualizar awast despues de los cambios:
+
+sudo perl /usr/lib/cgi-bin/awstats.pl -config=mi_aplicacion -update
+
+
  
 
 

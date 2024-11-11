@@ -313,7 +313,28 @@ activar el modulo poner estos comandos:
 
 ![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/servebgbix.png)
 
+para configurar nginx para que escuche por el puerto 8080 hacemos lo siguiente
 
+sudo nano /etc/nginx/sites-available/servidor2.centro.intranet
+
+y agregamos este contenido:
+
+server {
+    listen 8080;
+    server_name servidor2.centro.intranet;
+
+    root /var/www/servidor2.centro.intranet;
+    index index.php index.html index.htm;
+
+    location / {
+        try_files $uri $uri/ =404;
+    }
+
+    location ~ \.php$ {
+        include snippets/fastcgi-php.conf;
+        fastcgi_pass unix:/var/run/php/php-fpm.sock;
+    }
+}
         
 
   

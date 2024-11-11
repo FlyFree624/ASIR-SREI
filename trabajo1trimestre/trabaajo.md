@@ -368,3 +368,17 @@ y agregarlo
 
 127.0.0.1 servidor2.centro.intranet
 
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/agregarserv.png)
+
+sudo apt install phpmyadmin -y (el -y es para que le de a yes de manera automatica hago referencia por si lo he puesto antes que creo recordar que lo he puesto varias veces)
+
+crear un sitio para poder acceder facilmente a phpmyadmin:
+
+sudo ln -s /usr/share/phpmyadmin /var/www/servidor2.centro.intranet/phpmyadmin
+
+reiniciar nginx:
+
+sudo systemctl restart nginx
+
+
+

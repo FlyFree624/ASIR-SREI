@@ -1,7 +1,7 @@
 ![image](https://github.com/user-attachments/assets/b0d09e2c-0de4-471d-856e-38d1677fb064)**Instalación del servidor web apache. Usaremos dos dominios mediante el archivo hosts: centro.intranet y departamentos.centro.intranet. 
 El primero servirá el contenido mediante wordpress y el segundo una aplicación en python**
 
-Instalar Apache:
+Instalar Apache: 
 
 sudo apt install apache2 -y
 ![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/installap.png)

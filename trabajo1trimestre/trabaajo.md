@@ -336,8 +336,35 @@ server {
     }
 }
         
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/contenido.png)
 
-  
+una vez ya guardado ejecutar lo siguiente:
 
-  
+sudo ln -s /etc/nginx/sites-available/servidor2.centro.intranet /etc/nginx/sites-enabled/
+
+creamos un directorio para el nuevo dominio
+
+sudo mkdir -p /var/www/servidor2.centro.intranet
+
+ahora configurar php para ngnix (instalar si no está instalado aunque en ejercicios anteriries pedian que se instalara)
+
+sudo apt install php-fpm php-mysql -y (por las dudas y por hechar una mano aqui dejo lo dejo de nuevo)
+
+listen = /run/php/php8.2-fpm.sock (esta opcion tiene que estar habilitada)
+
+para llegar hay podemos acceder desde aqui: sudo nano /etc/php/8.2/fpm/pool.d/www.conf
+
+despues de todo esto reiniciarlo:
+
+sudo systemctl restart php8.2-fpm
+
+añadir el servidor al /etc/hosts
+
+a ese fichero se accede de esta manera:
+
+sudo nano /etc/hosts
+
+y agregarlo
+
+127.0.0.1 servidor2.centro.intranet
 

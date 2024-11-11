@@ -304,3 +304,15 @@ activar el modulo poner estos comandos:
 
   no olvidar reiniciar apache: sudo systemctl restart apache2
 
+  **escojo ngix**
+
+  hay que instalarlo [se recuerda hacer un sudo apt update]
+
+  uso el comando:
+
+        sudo apt install nginx
+
+  
+
+  
+

@@ -309,9 +309,11 @@ activar el modulo poner estos comandos:
   hay que instalarlo [se recuerda hacer un sudo apt update]
 
   uso el comando:
+  sudo apt install nginx
 
-        sudo apt install nginx
-    ![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/servebgbix.png)
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/servebgbix.png)
+
+
         
 
   

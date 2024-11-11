@@ -311,6 +311,8 @@ activar el modulo poner estos comandos:
   uso el comando:
 
         sudo apt install nginx
+    ![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/servebgbix.png)
+        
 
   
 

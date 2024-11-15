@@ -37,3 +37,24 @@ KeepAliveTimeout: Define el tiempo de espera entre solicitudes en una conexión 
 Ejemplo: KeepAliveTimeout 5: **mirar foto de arriba**
 **Foto para no olvidar es importante te puede servir de gran ayuda**
 ![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/conf_todas.png)
+
+<IfModule>
+esta directiva se utiliza para incluir configuraciones en el archivo de configuración de Apache solo si un módulo específico está cargado
+ejemplo: 
+
+
+LoadModule
+	
+Include
+	
+<Directory>
+
+<Files>
+
+<Location>
+	
+<VirtualHost>
+	
+¿Qué son los ficheros .htaccess?
+
+

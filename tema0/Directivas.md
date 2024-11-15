@@ -53,11 +53,13 @@ Include
 <Directory>
 Especifica configuraciones específicas para un directorio en particular
 ejemplo:
-
-
+	
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/ddi.png)
 
 <Files>
-
+Se usa para aplicar configuraciones específicas a ciertos archivos, basados en su nombre
+ejemplo: 
+	
 <Location>
 	
 <VirtualHost>

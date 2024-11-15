@@ -7,8 +7,10 @@ ejemplo:
                   
 ServerAdmin: Define el correo electrónico del administrador, mostrado en páginas de error.
 ejemplo:           ServerAdmin admin@ejemplo.com
+                    ![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/dirad.png)
                   
-ServerTokens: 
+ServerTokens: cuánta información del servidor se muestra en las cabeceras HTTP se configura en el httpd.conf
+ejemplo:            
 
 **Directivas de localización de ficheros**
 

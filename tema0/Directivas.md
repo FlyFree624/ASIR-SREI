@@ -48,9 +48,16 @@ Si el módulo mod_rewrite está habilitado, entonces se activa la reescritura de
 **LoadModule**
 esta directiva se usa para cargar módulos adicionales en Apache, permitiendo la habilitación como la reescritura de URL
 
+"son configuraciones claves en el archivo httpd.conf"
+
 ejemplo: 
 	
 **Include**
+permite incluir otros archivos de configuración dentro del archivo principal de configuración de Apache, es útil para organizar la configuración en archivos más pequeños y manejables, especialmente en entornos con múltiples sitios o configuraciones.
+
+"son configuraciones claves en el archivo httpd.conf"
+
+ejemplo: 
 	
 **<Directory>**
 Especifica configuraciones específicas para un directorio en particular

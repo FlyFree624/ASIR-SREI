@@ -60,6 +60,8 @@ permite incluir otros archivos de configuración dentro del archivo principal de
 "son configuraciones claves en el archivo httpd.conf"
 
 ejemplo: 
+
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/include.png)
 	
 **<Directory>**
 Especifica configuraciones específicas para un directorio en particular

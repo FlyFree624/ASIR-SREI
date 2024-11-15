@@ -74,9 +74,15 @@ actúa sobre las rutas de URL
 
 ejemplo: 
 
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/loca.png) 
 
-	
+Este bloque restringe el acceso a cualquier URL que comience con /admin solo al usuario admin
+
 <VirtualHost>
+
+Permite configurar múltiples (virtual hosts) en un mismo servidor Apache, cada uno con su propia configuración
+
+ejemplo: 
 	
 ¿Qué son los ficheros .htaccess?
 

@@ -38,21 +38,21 @@ Ejemplo: KeepAliveTimeout 5: **mirar foto de arriba**
 **Foto para no olvidar es importante te puede servir de gran ayuda**
 ![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/conf_todas.png)
 
-<IfModule>
+**<IfModule>**
 esta directiva se utiliza para incluir configuraciones en el archivo de configuración de Apache solo si un módulo específico está cargado
 	
 ejemplo: ![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/ifm.png)
 
 Si el módulo mod_rewrite está habilitado, entonces se activa la reescritura de URL.
 
-LoadModule
+**LoadModule**
 esta directiva se usa para cargar módulos adicionales en Apache, permitiendo la habilitación como la reescritura de URL
 
 ejemplo: 
 	
-Include
+**Include**
 	
-<Directory>
+**<Directory>**
 Especifica configuraciones específicas para un directorio en particular
 ejemplo:
 	
@@ -60,7 +60,7 @@ ejemplo:
 
 Esta configuración permite que los archivos .htaccess en /var/www/html puedan anular la configuración del servidor.
 
-<Files>
+**<Files>**
 Se usa para aplicar configuraciones específicas a ciertos archivos, basados en su nombre
 ejemplo: 
 
@@ -68,7 +68,7 @@ ejemplo:
 
 Esta configuración niega el acceso al archivo config.php desde cualquier lugar.
 	
-<Location>
+**<Location>**
 	
 actúa sobre las rutas de URL
 
@@ -78,12 +78,17 @@ ejemplo:
 
 Este bloque restringe el acceso a cualquier URL que comience con /admin solo al usuario admin
 
-<VirtualHost>
+**<VirtualHost>**
 
 Permite configurar múltiples (virtual hosts) en un mismo servidor Apache, cada uno con su propia configuración
 
 ejemplo: 
+
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/virh.png)
+
+Esto configura dos sitios diferentes, uno para site1.com y otro para site2.com, ambos en el puerto 80.
 	
-¿Qué son los ficheros .htaccess?
+**¿Qué son los ficheros .htaccess?**
+Son archivos de configuración utilizados para modificar la configuración de Apache a nivel de directorio sin necesidad de editar el archivo principal httpd.conf, es muy util para configuraciones específicas de directorios, como reglas de reescritura de URL, restricciones de acceso...etc.
 
 

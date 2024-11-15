@@ -43,6 +43,8 @@ esta directiva se utiliza para incluir configuraciones en el archivo de configur
 	
 ejemplo: ![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/ifm.png)
 
+Si el módulo mod_rewrite está habilitado, entonces se activa la reescritura de URL.
+
 LoadModule
 esta directiva se usa para cargar módulos adicionales en Apache, permitiendo la habilitación como la reescritura de URL
 
@@ -56,11 +58,21 @@ ejemplo:
 	
 ![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/ddi.png)
 
+Esta configuración permite que los archivos .htaccess en /var/www/html puedan anular la configuración del servidor.
+
 <Files>
 Se usa para aplicar configuraciones específicas a ciertos archivos, basados en su nombre
 ejemplo: 
+
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/fih.png)
+
+Esta configuración niega el acceso al archivo config.php desde cualquier lugar.
 	
 <Location>
+	
+actúa sobre las rutas de URL
+
+ejemplo: 
 	
 <VirtualHost>
 	

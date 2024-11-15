@@ -50,7 +50,9 @@ esta directiva se usa para cargar módulos adicionales en Apache, permitiendo la
 
 "son configuraciones claves en el archivo httpd.conf"
 
-ejemplo: 
+ejemplo:
+
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/lm.png)
 	
 **Include**
 permite incluir otros archivos de configuración dentro del archivo principal de configuración de Apache, es útil para organizar la configuración en archivos más pequeños y manejables, especialmente en entornos con múltiples sitios o configuraciones.

@@ -73,6 +73,8 @@ Esta configuración niega el acceso al archivo config.php desde cualquier lugar.
 actúa sobre las rutas de URL
 
 ejemplo: 
+
+
 	
 <VirtualHost>
 	

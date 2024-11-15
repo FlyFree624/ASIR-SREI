@@ -10,18 +10,30 @@ ejemplo:           ServerAdmin admin@ejemplo.com
                     ![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/dirad.png)
                   
 ServerTokens: cuánta información del servidor se muestra en las cabeceras HTTP se configura en el httpd.conf
-ejemplo:            
+ejemplo:            ![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/conf_todas.png)
+                    esto vale para todas (configurarlo en httpd.conf, ami me resulta mas facil que en un VirtualHost pero tambien es valido)
 
 **Directivas de localización de ficheros**
 
-DocumentRoot: 
-ErrorLog:	
-CustomLog:	
-ServerRoot;	
+DocumentRoot: Especifica la ubicación de los archivos que se servirán.
+ejemplo: DocumentRoot "/var/www/html"  **mirar foto de arriba**
+
+ErrorLog:	Define el archivo donde se registran los errores del servidor.
+Ejemplo: ErrorLog "/var/log/apache2/error.log" **mirar foto de arriba**
+CustomLog:	Establece un archivo personalizado para registrar accesos.
+Ejemplo:CustomLog "/var/log/apache2/access.log" combined **mirar foto de arriba**
+ServerRoot: Indica el directorio base del servidor.
+Ejemplo: ServerRoot "/etc/httpd" **mirar foto de arriba**
 
 **Directivas de control de la conexión**
 
-Timeout: 
-KeepAlive: 
-MaxKeepAliveRequests: 
-KeepAliveTimeout: 
+Timeout: Configura el tiempo de espera antes de cerrar una conexión inactiva.
+Ejemplo: Timeout 300 **mirar foto de arriba**
+KeepAlive: Activa/desactiva conexiones persistentes
+Ejemplo: KeepAlive On **mirar foto de arriba**
+MaxKeepAliveRequests: Limita el número de solicitudes por conexión persistente.
+Ejemplo:MaxKeepAliveRequests 100 **mirar foto de arriba**
+KeepAliveTimeout: Define el tiempo de espera entre solicitudes en una conexión persistente.
+Ejemplo: KeepAliveTimeout 5: **mirar foto de arriba**
+**Foto para no olvidar es importante te puede servir de gran ayuda**
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/conf_todas.png)

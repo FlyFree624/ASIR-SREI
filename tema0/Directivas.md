@@ -40,11 +40,13 @@ Ejemplo: KeepAliveTimeout 5: **mirar foto de arriba**
 
 <IfModule>
 esta directiva se utiliza para incluir configuraciones en el archivo de configuración de Apache solo si un módulo específico está cargado
-ejemplo:
-![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/ifm.png)
-
+	
+ejemplo: ![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/ifm.png)
 
 LoadModule
+esta directiva se usa para cargar módulos adicionales en Apache, permitiendo la habilitación como la reescritura de URL
+
+ejemplo: 
 	
 Include
 	

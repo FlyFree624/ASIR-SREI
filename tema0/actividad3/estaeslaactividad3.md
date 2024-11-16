@@ -1,4 +1,5 @@
-Ejercicios
+Ejercicios:
+
 **1 Crea un directorio llamado "dir1" y otro llamado "dir2"**
 
 **2 Explica qué diferencia existe entre ambos.:**

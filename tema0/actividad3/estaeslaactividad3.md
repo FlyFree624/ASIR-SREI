@@ -82,14 +82,49 @@ me sale eso porque tengo la otra activa, la dejo porque la actividad lo pide y s
 
 sudo nano /etc/apache2/sites-available/000-default.conf  aqui como antes la unica diferencia es que hay que añador un .
 
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/mintra.png)
 
+# no olvidar reiniciar apache
+
+# sudo systemctl restart apache2
+y en el /etc/hosts/ añadir la ip y sub.marisma.intranet luego pones eso en el navegador y listo
 
 **Permite el acceso de las peticiones provenientes de "10.3.0.100" con máscara "255.255.0.0"**
+
+en sudo nano /etc/apache2/sites-available/000-default.conf poner la directiva
+
+<Directory /var/www/html/dir1>
+    Require all denied
+    Require ip 10.3.0.0/16
+</Directory>
+
+reiniciar apache:
+sudo systemctl restart apache2
 
 **4 Modifica la configuración de forma que el acceso a dir1:
 Se permita a "marisma.intranet" y no se permita desde 10.3.0.101"**
 
+en sudo nano /etc/apache2/sites-available/000-default.conf poner la directiva
+
+<Directory /var/www/html/dir1>
+    Require all denied
+    Require host marisma.intranet
+    Require not ip 10.3.0.101
+</Directory>
+
+reiniciar apache:
+sudo systemctl restart apache2
+
 **5 Modifica la configuración de forma que el acceso a dir2:
 Se permita a "10.3.0.100/8" y no a "marisma.intranet"**
 
+en sudo nano /etc/apache2/sites-available/000-default.conf poner la directiva
 
+<Directory /var/www/html/dir2>
+    Require all denied
+    Require ip 10.0.0.0/8
+    Require not host marisma.intranet
+</Directory>
+
+reiniciar apache:
+sudo systemctl restart apache2

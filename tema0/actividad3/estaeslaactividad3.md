@@ -74,8 +74,15 @@ en /etc/hosts añado mi ip y marisma.intranet
 
 ![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/ma.png)
 
+resultado:
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/err.png)
+me sale eso porque tengo la otra activa, la dejo porque la actividad lo pide y si la quito esta mal
 
 **Permite el acceso desde cualquier subdominio de "marisma.intranet"**
+
+sudo nano /etc/apache2/sites-available/000-default.conf  aqui como antes la unica diferencia es que hay que añador un .
+
+
 
 **Permite el acceso de las peticiones provenientes de "10.3.0.100" con máscara "255.255.0.0"**
 

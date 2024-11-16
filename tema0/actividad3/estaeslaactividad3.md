@@ -26,6 +26,22 @@ esta Afecta únicamente al directorio /var/www/example1
 **3 Para dir1**
 **Permite el acceso de las peticiones provenientes de 10.3.0.100**
 
+he movido el dir1 y el dir2 aqui /var/www/html para hacerlo desde hay ya que la directiva anterior me ha llamado la atención y he decido paracticar con esa ruta
+
+# esto es para acceder al archivo de configuración
+# /etc/apache2/sites-available/000-default.conf para configuraciones específicas de sitios.
+# /etc/apache2/apache2.conf para configuraciones globales.
+# /etc/apache2/httpd.conf solo si decides incluir configuraciones adicionales.
+
+hago un sudo nano /etc/apache2/sites-available/000-default.conf para acceder al aqchivo de configuracion
+
+esta directiva:
+<Directory /var/www/html/dir1>
+    Order Deny,Allow         
+    Deny from All                                                 
+    Allow from 10.3.0.100                                      
+</Directory>
+
 **Permite el acceso desde "marisma.intranet"**
 
 **Permite el acceso desde cualquier subdominio de "marisma.intranet"**

@@ -53,7 +53,25 @@ sudo a2ensite 000-default.conf
 # sudo systemctl restart apache2
 
 
-**Permite el acceso desde "marisma.intranet"**
+**Permite el acceso desde "marisma.intranet" en dir1**
+
+escribo esta ruta en mi shell:
+
+sudo nano /etc/apache2/sites-available/000-default.conf
+
+añado esta directiva
+
+<Directory /var/www/html/dir1>
+    # Permitir acceso solo desde marisma.intranet
+    Require host marisma.intranet
+</Directory>
+
+en ip a veo la ip de mi servidor
+
+en /etc/hosts añado mi ip y marisma.intranet
+
+
+
 
 **Permite el acceso desde cualquier subdominio de "marisma.intranet"**
 

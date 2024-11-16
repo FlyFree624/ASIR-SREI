@@ -70,7 +70,7 @@ en ip a veo la ip de mi servidor
 
 en /etc/hosts añado mi ip y marisma.intranet
 
-
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/ma.png)
 
 
 **Permite el acceso desde cualquier subdominio de "marisma.intranet"**

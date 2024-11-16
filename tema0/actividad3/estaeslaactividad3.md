@@ -66,6 +66,8 @@ añado esta directiva
     Require host marisma.intranet
 </Directory>
 
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/pri.png)
+
 en ip a veo la ip de mi servidor
 
 en /etc/hosts añado mi ip y marisma.intranet

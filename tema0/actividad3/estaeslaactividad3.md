@@ -33,7 +33,7 @@ he movido el dir1 y el dir2 aqui /var/www/html para hacerlo desde hay ya que la 
 # /etc/apache2/apache2.conf para configuraciones globales.
 # /etc/apache2/httpd.conf solo si decides incluir configuraciones adicionales.
 
-hago un sudo nano /etc/apache2/sites-available/000-default.conf para acceder al aqchivo de configuracion
+hago un sudo nano /etc/apache2/sites-available/000-default.conf para acceder al archivo de configuracion
 
 esta directiva:
 <Directory /var/www/html/dir1>
@@ -41,6 +41,17 @@ esta directiva:
     Deny from All                                                 
     Allow from 10.3.0.100                                      
 </Directory>
+
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/direcdir.png)
+
+me aseguro de aplicar los cambios con este comando:
+
+sudo a2ensite 000-default.conf
+
+# reinicio apache:
+
+# sudo systemctl restart apache2
+
 
 **Permite el acceso desde "marisma.intranet"**
 

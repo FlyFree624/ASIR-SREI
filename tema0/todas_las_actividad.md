@@ -1,4 +1,4 @@
---------------------------------------------------------------ACTIVIDAD 4--------------------------------------------------------------
+--------------------------------------------------------------ACTIVIDAD 3--------------------------------------------------------------
 **Directivas de identificación**
 la se utilizan para configurar cómo se identifica y maneja el servidor en las respuestas HTTP
 ServerName: Especifica el nombre del servidor web aplica en el archivo de configuración principal o en configuraciones de un host virtual
@@ -38,6 +38,8 @@ KeepAliveTimeout: Define el tiempo de espera entre solicitudes en una conexión 
 Ejemplo: KeepAliveTimeout 5: **mirar foto de arriba**
 **Foto para no olvidar es importante te puede servir de gran ayuda**
 ![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/conf_todas.png)
+
+--------------------------------------------------------------ACTIVIDAD 4--------------------------------------------------------------
 
 **<IfModule>**
 esta directiva se utiliza para incluir configuraciones en el archivo de configuración de Apache solo si un módulo específico está cargado
@@ -242,3 +244,5 @@ en sudo nano /etc/apache2/sites-available/000-default.conf poner la directiva
 
 reiniciar apache:
 sudo systemctl restart apache2
+
+--------------------------------------------------------------ACTIVIDAD 6--------------------------------------------------------------

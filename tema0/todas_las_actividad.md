@@ -302,3 +302,5 @@ sudo systemctl restart apache2
 comprobar:
 
 escribir en el navegador http://mi_sitio.local
+
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/localmis.png)

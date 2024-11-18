@@ -293,4 +293,12 @@ sudo a2ensite mi_sitio.local.conf
 
 abrimos el /etc/hosts y añadimos la siguiente ip y el dominio ese
 
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/Captura%20de%20pantalla%202024-11-18%20180333.png)
 
+reiniciamos apache
+
+sudo systemctl restart apache2
+
+comprobar:
+
+escribir en el navegador http://mi_sitio.local

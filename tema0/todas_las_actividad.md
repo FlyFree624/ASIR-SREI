@@ -246,3 +246,51 @@ reiniciar apache:
 sudo systemctl restart apache2
 
 --------------------------------------------------------------ACTIVIDAD 6--------------------------------------------------------------
+
+
+--------------------------------------------------------------ACTIVIDAD 7--------------------------------------------------------------
+
+--------------------------------------------------------------ACTIVIDAD 8--------------------------------------------------------------
+
+**CONFIGURAR UN Virtual host**
+
+instalar apache si no esta instalado bueno ya lo hicimos antes
+
+crear un directorio para un sitio web (el tuyo)
+
+sudo mkdir -p /var/www/mi_sitio
+
+Crear un Archivo de Configuración para el Virtual Host
+
+los ficheros de configuración de apache se encuentran aqui
+/etc/apache2/sites-available/
+
+
+sudo nano /etc/apache2/sites-available/mi_sitio.local.conf
+
+creamos un archivo de configuracion
+
+sudo nano /etc/apache2/sites-available/mi_sitio.local.conf
+
+y agregamos esto
+
+<VirtualHost *:80>
+    ServerAdmin webmaster@mi_sitio.local
+    DocumentRoot /var/www/mi_sitio
+    ServerName mi_sitio.local
+    ErrorLog ${APACHE_LOG_DIR}/error.log
+    CustomLog ${APACHE_LOG_DIR}/access.log combined
+
+    <Directory /var/www/mi_sitio>
+        AllowOverride All
+        Require all granted
+    </Directory>
+</VirtualHost>
+
+despues procedemos a habilitarlo
+
+sudo a2ensite mi_sitio.local.conf
+
+abrimos el /etc/hosts y añadimos la siguiente ip y el dominio ese
+
+

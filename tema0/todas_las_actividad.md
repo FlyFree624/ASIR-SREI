@@ -1,4 +1,5 @@
 --------------------------------------------------------------ACTIVIDAD 3--------------------------------------------------------------
+
 **Directivas de identificación**
 la se utilizan para configurar cómo se identifica y maneja el servidor en las respuestas HTTP
 ServerName: Especifica el nombre del servidor web aplica en el archivo de configuración principal o en configuraciones de un host virtual
@@ -304,3 +305,5 @@ comprobar:
 escribir en el navegador http://mi_sitio.local
 
 ![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/localmis.png)
+
+--------------------------------------------------------------ACTIVIDAD 9--------------------------------------------------------------

@@ -1,4 +1,4 @@
---------------------------------------------------------------ACTIVIDAD 3--------------------------------------------------------------
+--------------------------------------------------------------ACTIVIDAD 4--------------------------------------------------------------
 **Directivas de identificación**
 la se utilizan para configurar cómo se identifica y maneja el servidor en las respuestas HTTP
 ServerName: Especifica el nombre del servidor web aplica en el archivo de configuración principal o en configuraciones de un host virtual
@@ -110,7 +110,7 @@ Son archivos de configuración utilizados para modificar la configuración de Ap
 
 
 
---------------------------------------------------------------ACTIVIDAD 4--------------------------------------------------------------
+--------------------------------------------------------------ACTIVIDAD 5--------------------------------------------------------------
 
 Ejercicios:
 

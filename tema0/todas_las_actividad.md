@@ -247,7 +247,63 @@ reiniciar apache:
 sudo systemctl restart apache2
 
 --------------------------------------------------------------ACTIVIDAD 6--------------------------------------------------------------
+Escribe las expresiones regulares para los siguientes supuestos:
 
+**Directorios en /www/ cuyo nombre consista en tres dígitos.**
+
+^/www/\d{3}$
+
+Ficheros: *.gif, *.jpeg, *.jpg, *.png d
+**.+\.(gif | jpe?g | png )**
+
+.+\.(gif|jpe?g|png)$
+
+**Escribe una directiva para redireccionar todos los GIF a ficheros JPEG en otro servidor**
+RedirectMatch "(.*)\.gif$" "$1.jpg"
+
+"(.*)\.gif$" "$1.jpg"
+
+**Números enteros y decimales**
+^[+-]?\d+(\.\d+)?$
+
+**Números de teléfono en el formato Americano: 123-123-1234**
+^\d{3}-\d{3}-\d{4}$
+
+**Palabras**
+
+^[a-zA-Z]+$
+
+**Códigos hexadecimales de color de 24 o 32 bits**
+
+^#([0-9a-fA-F]{6}|[0-9a-fA-F]{8})$
+
+**Palabras de 4 letras**
+
+^[a-zA-Z]{4}$
+
+**Número entero sin signo**
+
+^\d+$
+
+**Número entero con signo**
+
+^[+-]?\d+$
+
+**Números reales**
+
+^[+-]?\d*\.\d+$
+
+**Número reales con exponente**
+
+^[+-]?\d*\.?\d+([eE][+-]?\d+)?$
+
+**Email**
+
+^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$
+
+**Números del 0 a 255**
+
+^([1-9]?[0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$
 
 --------------------------------------------------------------ACTIVIDAD 7--------------------------------------------------------------
 

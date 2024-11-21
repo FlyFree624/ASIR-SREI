@@ -363,3 +363,22 @@ escribir en el navegador http://mi_sitio.local
 ![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/localmis.png)
 
 --------------------------------------------------------------ACTIVIDAD 9--------------------------------------------------------------
+
+**Crea cinco usuarios: usuario1, usuario2, usuario3, usuario4, usuario5.**
+sudo htpasswd -c /etc/apache2/.htpasswd usuario
+
+el **-c** crea el archivo, si ya existe, no lo uses para agregar más usuarios (solo la primera vez).
+
+Te pedirá que ingreses y confirmes la contraseña para ese usuario.
+
+**Crea dos grupos de usuarios, el primero formado por usuario1 y usuario2; y el segundo por el resto de usuarios.**
+
+**Crea un directorio llamado privado1 que permita el acceso a todos los usuarios.**
+
+**Crea un directorio llamado privado2 que permita el acceso sólo los usuarios del grupo1.**
+
+**La directiva satisfy controla cómo se debe comportar el servidor cuando tenemos autorizaciones a nivel de host (order, allow, deny) y autorizaciones de usuarios (require).http://httpd.apache.org/docs/2.4/es/mod/mod_access_compat.html#satisf**
+
+**En el directorio privado2 haz que sólo sea accesible desde el localhost, y 
+estudia cómo se comporta la autorización si ponemos: satisfy any, satisfy all**
+

@@ -487,3 +487,4 @@ sudo htpasswd -c /etc/apache2/.htpasswd usuario1
 
 Reiniciar Apache
 sudo systemctl restart apache2
+--------------------------------------------------------------ACTIVIDAD 9 Authentication. Digest--------------------------------------------------------------

@@ -306,6 +306,49 @@ RedirectMatch "(.*)\.gif$" "$1.jpg"
 ^([1-9]?[0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$
 
 --------------------------------------------------------------ACTIVIDAD 7--------------------------------------------------------------
+**reescribir la URL y que usemos en vez de php html**
+
+ http://localhost/operacion.html?op=suma&op1=6&op2=8
+ 
+Options FollowSymLinks
+RewriteEngine On
+RewriteRule ^operacion\.html$ operacion.php
+
+**usar la extensión do en vez de html**
+
+en .htacces escribir
+
+Options FollowSymLinks
+RewriteEngine On
+RewriteRule ^(.+)\.do$ $1.html [nc]
+
+**Crear URL amigables**
+
+Crea un .htaccess con lo siguiente:
+
+Options FollowSymLinks
+RewriteEngine On
+RewriteBase /
+RewriteRule ^([a-z]+)/([0-9]+)/([0-9]+)$ operacion.php?op=$1&op1=$2&op2=$3
+
+**Acortar URL**
+
+ escribimos en nuestro .htaccess un RewriteRule de la siguiente forma:
+
+RewriteRule ^buscar busqueda/buscar.php
+
+
+**Uso del RewriteCond**
+
+%{HTTP\_USER\_AGENT}: Información del cliente que accede
+
+%{QUERY_STRING}: Guarda la cadena de parámetros de una URL dinámica.
+
+%{REMOTE_ADDR}: Dirección de destino
+
+%{HTTP_REFERER}: Guarda la URL que accede a nuestra página y %{REQUEST_URI} guarda la URI, URL sin nombre de dominio. Podemos evitar el Hot_Linking, o uso de recursos de tu servidor desde otra web. Por ejemplo, un caso muy común es usar imágenes alojadas en tu servidor puestas en otras web.
+
+
 
 --------------------------------------------------------------ACTIVIDAD 8--------------------------------------------------------------
 

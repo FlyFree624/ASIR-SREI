@@ -408,20 +408,82 @@ escribir en el navegador http://mi_sitio.local
 --------------------------------------------------------------ACTIVIDAD 9--------------------------------------------------------------
 
 **Crea cinco usuarios: usuario1, usuario2, usuario3, usuario4, usuario5.**
-sudo htpasswd -c /etc/apache2/.htpasswd usuario
+sudo htpasswd -c /etc/apache2/.htpasswd usuario1
 
 el **-c** crea el archivo, si ya existe, no lo uses para agregar más usuarios (solo la primera vez).
 
 Te pedirá que ingreses y confirmes la contraseña para ese usuario.
 
 **Crea dos grupos de usuarios, el primero formado por usuario1 y usuario2; y el segundo por el resto de usuarios.**
+sudo groupadd grupo1 el primer grupo
+
+sudo usermod -aG grupo1 usuario1
+sudo usermod -aG grupo1 usuario2
+
+sudo groupadd grupo2 el segundo grupo
+
+sudo usermod -aG grupo2 usuario3
+sudo usermod -aG grupo2 usuario4
+sudo usermod -aG grupo2 usuario5
 
 **Crea un directorio llamado privado1 que permita el acceso a todos los usuarios.**
 
+sudo mkdir /var/www/html/privado1 (crear directorio)
+
+configuro los permisos para acceder al directorio privado1
+sudo chmod 775 /var/www/html/privado1
+sudo chown :www-data /var/www/html/privado1
+
 **Crea un directorio llamado privado2 que permita el acceso sólo los usuarios del grupo1.**
 
+sudo mkdir /var/www/html/privado2 (crear directorio)
+configuro los permisos grupo1 puedan acceder al directorio privado2
+
+sudo chown :grupo1 /var/www/html/privado2
+sudo chmod 770 /var/www/html/privado2
+
 **La directiva satisfy controla cómo se debe comportar el servidor cuando tenemos autorizaciones a nivel de host (order, allow, deny) y autorizaciones de usuarios (require).http://httpd.apache.org/docs/2.4/es/mod/mod_access_compat.html#satisf**
+
+Para configurar adecuadamente el comportamiento del servidor en relación con la directiva Satisfy, necesitas considerar cómo combinar las autorizaciones basadas en usuarios/grupos (Require) y las basadas en direcciones IP o hosts Order, Allow, Deny o Require ip
+Ejemplo de configuración para privado2:
+apache
+Copiar código
+<Directory "/var/www/html/privado2">
+    # Restricción basada en usuario o grupo
+    AuthType Basic
+    AuthName "Privado"
+    AuthUserFile /etc/apache2/.htpasswd
+    Require group grupo1
+
+    # Restricción basada en dirección IP
+    Require ip 127.0.0.1
+
+    # Comportamiento combinado
+    Satisfy any
+</Directory>
+
+Reiniciar Apache
+sudo systemctl restart apache2
 
 **En el directorio privado2 haz que sólo sea accesible desde el localhost, y 
 estudia cómo se comporta la autorización si ponemos: satisfy any, satisfy all**
 
+usar las opciones any y all
+En el archivo de configuración de Apache (/etc/apache2/sites-available/000-default.conf) escribir
+
+<Directory "/var/www/html/privado2">
+    AuthType Basic
+    AuthName "Directorio privado"
+    AuthUserFile /etc/apache2/.htpasswd
+    Require valid-user
+
+    Require ip 127.0.0.1
+
+    Satisfy any
+</Directory>
+
+crer un .htpasswd 
+sudo htpasswd -c /etc/apache2/.htpasswd usuario1
+
+Reiniciar Apache
+sudo systemctl restart apache2

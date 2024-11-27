@@ -487,4 +487,23 @@ sudo htpasswd -c /etc/apache2/.htpasswd usuario1
 
 Reiniciar Apache
 sudo systemctl restart apache2
---------------------------------------------------------------ACTIVIDAD 9 Authentication. Digest--------------------------------------------------------------
+--------------------------------------------------------------ACTIVIDAD 9 Authentication. Digest----------------------------------------------
+
+**Crea dos subdirectorios en el host virtual default que se llamen grupo1 y grupo2.**
+voy al directorio por defecto
+
+cd /var/www/html
+
+creo las carpetas grupo1 y grupo2
+
+sudo mkdir grupo1
+sudo mkdir grupo2
+
+luego en la url de mi navegador pongo 127.0.0.1/
+
+**Crea varios usuarios con la utilidad htdigest, asignando a cada uno un dominio distinto (dominio1 y dominio2).**
+
+**Configura el directorio grupo1 para que sólo puedan acceder los usuarios del dominio dominio1; y el directorio grupo2 para que sólo puedan acceder los usuarios del dominio dominio1**
+
+
+

@@ -499,9 +499,51 @@ creo las carpetas grupo1 y grupo2
 sudo mkdir grupo1
 sudo mkdir grupo2
 
-luego en la url de mi navegador pongo 127.0.0.1/
+luego en la url de mi navegador pongo 127.0.0.1/grupo1 y 2
+
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/vhost.png)
 
 **Crea varios usuarios con la utilidad htdigest, asignando a cada uno un dominio distinto (dominio1 y dominio2).**
+
+La herramienta htdigest se utiliza para crear archivos de contraseñas encriptadas que permiten implementar autenticación HTTP Digest
+
+crear el archivo en donde se van a guardar las contraseñas
+
+sudo touch /etc/apache2/.htdigest
+
+creo el dominio y el usuario
+
+sudo htdigest /etc/apache2/.htdigest dominio1 usuario1
+
+editamos la configuracion de nuestro sitio web
+
+sudo nano /etc/apache2/sites-available/000-default.conf
+
+y le asignamos las directivas a dominio1 y a dominio2
+
+<Location "/dominio1">
+    AuthType Digest
+    AuthName "dominio1"
+    AuthDigestProvider file
+    AuthUserFile /etc/apache2/.htdigest
+    Require valid-user
+</Location>
+
+<Location "/dominio2">
+    AuthType Digest
+    AuthName "dominio2"
+    AuthDigestProvider file
+    AuthUserFile /etc/apache2/.htdigest
+    Require valid-user
+</Location>
+
+habilitamos el modulo digest
+
+sudo a2enmod auth_digest
+
+y reiniciamos apache
+
+sudo systemctl restart apache2
 
 **Configura el directorio grupo1 para que sólo puedan acceder los usuarios del dominio dominio1; y el directorio grupo2 para que sólo puedan acceder los usuarios del dominio dominio1**
 

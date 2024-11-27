@@ -547,5 +547,17 @@ sudo systemctl restart apache2
 
 **Configura el directorio grupo1 para que sólo puedan acceder los usuarios del dominio dominio1; y el directorio grupo2 para que sólo puedan acceder los usuarios del dominio dominio1**
 
+en el directorio de mi sitio web 
+ aqui
 
+<Directory "/var/www/html/grupo1">
+    AuthType Digest
+    AuthName "dominio1"
+    AuthDigestProvider file
+    AuthUserFile /etc/apache2/.htdigest
+    Require valid-user
+</Directory>
 
+y asin en el otro
+
+y reiniciar apache

@@ -601,4 +601,7 @@ y escribir este virtualhost
 
 crear un Document root
 sudo mkdir /var/www/seguro.conf
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/parte.png)
+
+
 

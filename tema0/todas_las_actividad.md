@@ -603,5 +603,19 @@ crear un Document root
 sudo mkdir /var/www/seguro.conf
 ![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/parte.png)
 
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/reload.png)
 
+para redirigir http a https
 
+sudo nano /etc/apache2/sites-available/seguro.conf
+
+abajo crear otro virtualhost
+
+<VirtualHost *:80>
+	ServerName seguro.conf
+	Redirect / https://seguro.conf/
+</VirtualHost>
+
+guardar y cerrar
+sudo apachectl configtest
+sudo systemctl reload apache2

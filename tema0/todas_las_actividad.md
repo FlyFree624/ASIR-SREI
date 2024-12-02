@@ -561,3 +561,24 @@ en el directorio de mi sitio web
 y asin en el otro
 
 y reiniciar apache
+
+--------------------------------------------------------------Apache#1_10 SSL----------------------------------------------
+
+(instalar apche si no lo tines intalado)
+
+si hay un firewall activado abrir los puertos http y https
+
+sudo ufw allow "Apache Full"
+
+habilitar mod_ssl
+
+sudo a2enmod ssl
+
+reiniciar apache
+
+sudo systemctl restart apache2
+
+crear certificado ssl
+
+sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/apache-selfsigned.key -out /etc/ssl/certs/apache-selfsigned.crt
+

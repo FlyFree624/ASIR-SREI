@@ -583,5 +583,22 @@ crear certificado ssl
 sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/apache-selfsigned.key -out /etc/ssl/certs/apache-selfsigned.crt
 
 
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/certificado.png)
 
+escibir esto en la shell
+
+sudo nano /etc/apache2/sites-available/your_domain_or_ip.conf (pero your_domain_or_ip.conf pero aqui poner tu ip o nombre de dominio)
+y escribir este virtualhost
+
+<VirtualHost *:443>
+   ServerName seguro.conf
+   DocumentRoot /var/www/seguro.conf
+
+   SSLEngine on
+   SSLCertificateFile /etc/ssl/certs/apache-selfsigned.crt
+   SSLCertificateKeyFile /etc/ssl/private/apache-selfsigned.key
+</VirtualHost>
+
+crear un Document root
+sudo mkdir /var/www/seguro.conf
 

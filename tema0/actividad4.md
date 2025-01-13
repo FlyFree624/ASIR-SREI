@@ -55,11 +55,13 @@ dig -x 75.126.153.206
 
 dig @ns1.google.com www.google.com
 
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/siete.png)
 
+**Muestra información sobre el TTL de drive.google.com. Ejecútalo en varias ocasiones y comprueba cómo cambia el valor**
 
-Muestra información sobre el TTL de drive.google.com. Ejecútalo en varias ocasiones y comprueba cómo cambia el valor
+dig +nocmd drive.google.com +noall +answer
 
-
+![]()
 Muestra los registro type NS de redhat.com
 
 

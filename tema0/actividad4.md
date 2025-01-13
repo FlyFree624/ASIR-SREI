@@ -67,9 +67,13 @@ dig +nocmd drive.google.com +noall +answer
 
 dig -t NS redhat.com +noall +answer
 
-![]()
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/t8.png)
 
-Muestra todos los registros de redhat
+**Muestra todos los registros de google.com**
+
+dig google.com ANY +noall +answer
+
+![]()
 
 
 Crea un fichero de texto que contenga los dominios;

@@ -87,4 +87,4 @@ redhat.com
 
 dig -f names.txt +noall +answer
 
-![]()
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/t9.png)

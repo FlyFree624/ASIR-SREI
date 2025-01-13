@@ -13,9 +13,19 @@ para obtener la direccion que nos pide hacer en la shell esto:
 
 dig net NS +noall +answer
 
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/digns.png)
 
+y con todos se hace lo mismo
 
 Averigua los registros MX de los siguientes dominios:  uhu.es, us.es, wikipedia.org
+
+poner en la shell
+
+dig uhu.es MX +noall +answer
+
+
+
+y con todos se hace lo mismo
 
 
 Obten la dirección IPV6 de www.isc.org

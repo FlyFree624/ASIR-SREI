@@ -9,6 +9,11 @@ poner en la shell dig y el nombre del dominio
 
 Obtén la dirección y los servidor DNS que corresponden a los siguientes dominios:  net, com, us.es, wikipedia.org
 
+para obtener la direccion que nos pide hacer en la shell esto:
+
+dig net NS +noall +answer
+
+
 
 Averigua los registros MX de los siguientes dominios:  uhu.es, us.es, wikipedia.org
 

@@ -73,9 +73,14 @@ dig -t NS redhat.com +noall +answer
 
 dig google.com ANY +noall +answer
 
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/t2.png)
+
+
+**Crea un fichero de texto que contenga los dominios;**
+nano names.txt
+ubuntu.com
+redhat.com
+
 ![]()
-
-
-Crea un fichero de texto que contenga los dominios;
 
 Haz una consulta con dig empleando el fichero anterior

@@ -41,9 +41,13 @@ dig www.isc.org AAAA
 poner en la shell
 dig yahoo.com MX +noall +answer
 
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/mxd.png)
 
+**Muestra la información asociada con la dirección 75.126.153.206**
 
-Muestra la información asociada con la dirección 75.126.153.206
+escribir en la shell
+
+dig -x 75.126.153.206
 
 
 Muestra la dirección de www.google.es utilizando uno de los servidores DNS de google.com

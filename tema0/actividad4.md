@@ -4,7 +4,8 @@
 poner en la shell dig y el nombre del dominio
 
 ![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/dig.png)
-
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/digus.png)
+![]()
 
 Obtén la dirección y los servidor DNS que corresponden a los siguientes dominios:  net, com, us.es, wikipedia.org
 

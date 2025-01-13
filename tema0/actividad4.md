@@ -49,8 +49,12 @@ escribir en la shell
 
 dig -x 75.126.153.206
 
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/digshell.png)
 
-Muestra la dirección de www.google.es utilizando uno de los servidores DNS de google.com
+**Muestra la dirección de www.google.es utilizando uno de los servidores DNS de google.com**
+
+dig @ns1.google.com www.google.com
+
 
 
 Muestra información sobre el TTL de drive.google.com. Ejecútalo en varias ocasiones y comprueba cómo cambia el valor

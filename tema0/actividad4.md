@@ -23,12 +23,18 @@ poner en la shell
 
 dig uhu.es MX +noall +answer
 
-
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/gimx.png)
 
 y con todos se hace lo mismo
 
 
 Obten la dirección IPV6 de www.isc.org
+
+poner en la shell
+
+dig www.isc.org AAAA
+
+
 
 
 Muestra los servidores de correo de yahoo.com

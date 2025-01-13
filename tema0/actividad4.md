@@ -61,9 +61,13 @@ dig @ns1.google.com www.google.com
 
 dig +nocmd drive.google.com +noall +answer
 
-![]()
-Muestra los registro type NS de redhat.com
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/tll.png)
 
+**Muestra los registro type NS de redhat.com**
+
+dig -t NS redhat.com +noall +answer
+
+![]()
 
 Muestra todos los registros de redhat
 

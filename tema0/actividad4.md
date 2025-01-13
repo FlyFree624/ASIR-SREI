@@ -7,7 +7,7 @@ poner en la shell dig y el nombre del dominio
 ![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/digus.png)
 ![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/digwiki.png)
 
-Obtén la dirección y los servidor DNS que corresponden a los siguientes dominios:  net, com, us.es, wikipedia.org
+**Obtén la dirección y los servidor DNS que corresponden a los siguientes dominios:  net, com, us.es, wikipedia.org**
 
 para obtener la direccion que nos pide hacer en la shell esto:
 
@@ -17,7 +17,7 @@ dig net NS +noall +answer
 
 y con todos se hace lo mismo
 
-Averigua los registros MX de los siguientes dominios:  uhu.es, us.es, wikipedia.org
+**Averigua los registros MX de los siguientes dominios:  uhu.es, us.es, wikipedia.org**
 
 poner en la shell
 
@@ -28,16 +28,19 @@ dig uhu.es MX +noall +answer
 y con todos se hace lo mismo
 
 
-Obten la dirección IPV6 de www.isc.org
+**Obten la dirección IPV6 de www.isc.org**
 
 poner en la shell
 
 dig www.isc.org AAAA
 
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/ipv6dig.png)
 
+**Muestra los servidores de correo de yahoo.com**
 
+poner en la shell
+dig yahoo.com MX +noall +answer
 
-Muestra los servidores de correo de yahoo.com
 
 
 Muestra la información asociada con la dirección 75.126.153.206

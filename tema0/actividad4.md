@@ -81,6 +81,10 @@ nano names.txt
 ubuntu.com
 redhat.com
 
-![]()
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/t4.png)
 
-Haz una consulta con dig empleando el fichero anterior
+**Haz una consulta con dig empleando el fichero anterior**
+
+dig -f names.txt +noall +answer
+
+![]()

@@ -106,4 +106,14 @@ y ponemos esto en la shell para instalar: sudo apt-get install bind9 bind9utils 
 
 en la shell escribir sudo named-checkconf
 
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/tconfdns.png)
+
+si hay errores no muestra errores como es el caso, si hubiese errores te mostraria una advertencia
+
+reiniciamos
+
+sudo systemctl restart bind9
+
+ver los log:
+
 

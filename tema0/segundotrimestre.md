@@ -1,4 +1,4 @@
-
+----------------actividad4--------------------
 **Obtén la dirección IP de los siguientes dominios: www.uhu.es, www.us.es, es.wikipedia.org**
 
 poner en la shell dig y el nombre del dominio
@@ -88,3 +88,13 @@ redhat.com
 dig -f names.txt +noall +answer
 
 ![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/t9.png)
+
+----------------actividad5--------------------
+
+**Instala y configura bin9 en primer lugar como servidor caché y por último como forwarding. 
+En ambos casos debes:
+Comprueba la sintaxis del archivo de configuración (named-checkconf)
+Visualiza el archivo log y comprueba que responde adecuadamente (/var/log/syslog)**
+
+
+

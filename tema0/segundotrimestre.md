@@ -116,4 +116,4 @@ sudo systemctl restart bind9
 
 ver los log:
 
-
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/dnslog.png)

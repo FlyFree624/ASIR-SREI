@@ -96,5 +96,9 @@ En ambos casos debes:
 Comprueba la sintaxis del archivo de configuración (named-checkconf)
 Visualiza el archivo log y comprueba que responde adecuadamente (/var/log/syslog)**
 
+actualizamos con sudo ap update
 
+y ponemos esto en la shell para instalar: sudo apt-get install bind9 bind9utils bind9-doc
+
+![]()
 

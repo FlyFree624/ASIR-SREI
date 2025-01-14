@@ -100,5 +100,10 @@ actualizamos con sudo ap update
 
 y ponemos esto en la shell para instalar: sudo apt-get install bind9 bind9utils bind9-doc
 
-![]()
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/dns.png)
+
+**probar la configuracion**
+
+en la shell escribir sudo named-checkconf
+
 

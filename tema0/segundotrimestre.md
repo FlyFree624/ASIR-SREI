@@ -136,7 +136,6 @@ sudo systemctl restart bind9
 
 y ya solo queda hacer la consulta con dig
 
-![]()
-![image](https://github.com/user-attachments/assets/39a2e47c-4a1c-4bbd-877e-4436119f183a)
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/soa.png)
 
 

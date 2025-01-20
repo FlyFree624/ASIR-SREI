@@ -122,4 +122,8 @@ ver los log:
 
 zona directa
 
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/directa.png)
+
+zona inversa
+
 ![]()

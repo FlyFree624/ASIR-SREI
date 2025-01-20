@@ -126,4 +126,17 @@ zona directa
 
 zona inversa
 
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/inversa.png)
+
+configuramos el /etc/bind/named.conf.local con las zonas configuradas
+
+reiniciamos con 
+
+sudo systemctl restart bind9
+
+y ya solo queda hacer la consulta con dig
+
 ![]()
+![image](https://github.com/user-attachments/assets/39a2e47c-4a1c-4bbd-877e-4436119f183a)
+
+

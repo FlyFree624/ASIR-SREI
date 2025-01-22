@@ -10,7 +10,7 @@ sudo apt install apache2 php libapache2-mod-php mariadb-server phpmyadmin vsftpd
 
 ahora habilitamos php
 sudo a2enmod php
-![]()
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/apad.png)
 sudo systemctl restart apache2
 ![]()
 

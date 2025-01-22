@@ -147,10 +147,38 @@ EOF
 
 echo "Base de datos y usuario creados."
 
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/bdyusu.png)
 
+para habilitar servidorweb
 
+instalar mod_wsgi
 
+sudo apt install libapache2-mod-wsgi-py3
 
+creamos un archivo de configuracion para apache
 
+sudo nano /etc/apache2/sites-available/example.com.conf
 
+y agregamos esta directiva para wsgi
 
+<VirtualHost *:80>
+    ServerName example.com
+    DocumentRoot /var/www/example.com
+
+    # Configuración para WSGI
+    WSGIScriptAlias / /var/www/app.wsgi
+
+    # Permitir acceso al directorio de la aplicación
+    <Directory /var/www/>
+        Require all granted
+    </Directory>
+
+</VirtualHost>
+
+habilito el archivo de configuracion
+
+sudo a2ensite example.com.conf
+
+reinicio apache
+
+sudo systemctl restart apache2

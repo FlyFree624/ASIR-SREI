@@ -2,6 +2,16 @@
 primero actualizamos el sistema con
 sudo apt-get update
 
-procedemos a instalar apache
+procedemos a instalar apache y todo lo que nos pide
 
 sudo apt install apache2 php libapache2-mod-php mariadb-server phpmyadmin vsftpd openssh-server postfix dovecot-imapd dovecot-pop3d certbot python3-certbot-apache -y
+
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/apaa.png)
+
+ahora habilitamos php
+sudo a2enmod php
+![]()
+sudo systemctl restart apache2
+![]()
+
+

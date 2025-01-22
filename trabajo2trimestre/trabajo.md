@@ -56,6 +56,16 @@ configurar un ftp con TLS
 
 sudo nano /etc/vsftpd.conf
 
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/ftptls.png)
+
+lo ajustamos para que ponga esto
+
+ssl_enable=YES
+rsa_cert_file=/etc/ssl/certs/ssl-cert-snakeoil.pem
+rsa_private_key_file=/etc/ssl/private/ssl-cert-snakeoil.key
+force_local_data_ssl=YES
+force_local_logins_ssl=YES
+
 
 
 

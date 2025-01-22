@@ -66,6 +66,27 @@ rsa_private_key_file=/etc/ssl/private/ssl-cert-snakeoil.key
 force_local_data_ssl=YES
 force_local_logins_ssl=YES
 
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/confftp.png)
+
+reiniciamos el servicio ftp
+
+sudo systemctl restart vsftpd
+
+configuramos ssh y ftp
+
+permitir solo sftp
+
+editamos el /etc/ssh/sshd_config y añadimos lo siguiente
+
+Subsystem sftp internal-sftp
+Match Group sftp
+    ChrootDirectory %h
+    ForceCommand internal-sftp
+    AllowTcpForwarding no
+
+    
+
+
 
 
 

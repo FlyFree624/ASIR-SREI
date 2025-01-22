@@ -9,9 +9,19 @@ sudo apt install apache2 php libapache2-mod-php mariadb-server phpmyadmin vsftpd
 ![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/apaa.png)
 
 ahora habilitamos php
+
 sudo a2enmod php
+
 ![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/apad.png)
+
 sudo systemctl restart apache2
+
 ![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/apdr.png)
+
+ahora habilitamos los host virtuales
+
+sudo nano /etc/apache2/sites-available/000-default.conf
+
+
 
 

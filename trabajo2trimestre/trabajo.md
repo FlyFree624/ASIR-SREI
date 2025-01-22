@@ -12,6 +12,6 @@ ahora habilitamos php
 sudo a2enmod php
 ![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/apad.png)
 sudo systemctl restart apache2
-![]()
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/apdr.png)
 
 

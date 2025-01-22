@@ -22,6 +22,21 @@ ahora habilitamos los host virtuales
 
 sudo nano /etc/apache2/sites-available/000-default.conf
 
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/hostq.png)
+
+añadimos lo siguiente
+
+<VirtualHost *:80>
+    ServerAdmin webmaster@localhost
+    DocumentRoot /var/www/html
+    <Directory /var/www/html>
+        AllowOverride All
+    </Directory>
+    ErrorLog ${APACHE_LOG_DIR}/error.log
+    CustomLog ${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>
+
+![]()
 
 
 

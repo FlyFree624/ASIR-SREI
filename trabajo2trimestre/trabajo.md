@@ -129,6 +129,26 @@ EOF
 sudo a2ensite $domain
 sudo systemctl reload apache2
 
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/usuydire.png)
+
+creacion de base de datos y usuario
+
+#!/bin/bash
+read -p "Nombre de usuario SQL: " db_user
+read -sp "Contraseña: " db_pass
+read -p "Nombre de la base de datos: " db_name
+
+mysql -u root <<EOF
+CREATE DATABASE $db_name;
+CREATE USER '$db_user'@'localhost' IDENTIFIED BY '$db_pass';
+GRANT ALL PRIVILEGES ON $db_name.* TO '$db_user'@'localhost';
+FLUSH PRIVILEGES;
+EOF
+
+echo "Base de datos y usuario creados."
+
+
+
 
 
 

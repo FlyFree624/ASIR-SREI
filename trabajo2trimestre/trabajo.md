@@ -46,6 +46,16 @@ habilitamos los TLS
 
 sudo certbot --apache
 
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/tls.png)
+
+registrarse para obtener un dominio online
+
+![]() esta actividad la dejo perndiente
+
+configurar un ftp con TLS
+
+sudo nano /etc/vsftpd.conf
+
 
 
 

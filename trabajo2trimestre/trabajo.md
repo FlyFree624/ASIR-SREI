@@ -83,8 +83,51 @@ Match Group sftp
     ChrootDirectory %h
     ForceCommand internal-sftp
     AllowTcpForwarding no
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/winss.png)
 
-    
+y reiniciamos
+
+sudo systemctl restart ssh
+
+Configurar Postfix y Dovecot
+
+configuramos Dovecot
+
+sudo nano /etc/dovecot/dovecot.conf
+
+y ponemos
+
+protocols = imap pop3
+ssl = required
+ssl_cert = </etc/ssl/certs/ssl-cert-snakeoil.pem
+ssl_key = </etc/ssl/private/ssl-cert-snakeoil.key
+
+creacion de script
+
+para la creacion de usuarios y directorios
+
+Creación de usuarios y directorios
+
+#!/bin/bash
+read -p "Nombre de usuario: " username
+read -p "Dominio: " domain
+sudo useradd -m -s /bin/bash $username
+sudo passwd $username
+sudo mkdir -p /var/www/$domain
+sudo chown $username:$username /var/www/$domain
+sudo chmod 755 /var/www/$domain
+cat <<EOF | sudo tee /etc/apache2/sites-available/$domain.conf
+<VirtualHost *:80>
+    ServerName $domain
+    DocumentRoot /var/www/$domain
+    <Directory /var/www/$domain>
+        AllowOverride All
+    </Directory>
+</VirtualHost>
+EOF
+
+sudo a2ensite $domain
+sudo systemctl reload apache2
 
 
 

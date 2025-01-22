@@ -36,7 +36,17 @@ añadimos lo siguiente
     CustomLog ${APACHE_LOG_DIR}/access.log combined
 </VirtualHost>
 
-![]()
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/virtual.png)
+
+reiniciamos
+
+sudo systemctl restart apache2
+
+habilitamos los TLS
+
+sudo certbot --apache
+
+
 
 
 

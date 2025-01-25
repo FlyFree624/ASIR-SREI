@@ -164,7 +164,8 @@ y procedemos a probarlo
 desde la maquina cliente hacer
 
 ssh usuario@la ip de la maquina -p el puerto asignado
-![]()
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/sshcli.png)
+
 
 ![]()
 

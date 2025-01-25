@@ -167,5 +167,7 @@ ssh usuario@la ip de la maquina -p el puerto asignado
 ![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/sshcli.png)
 
 
-![]()
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/demostrar.png)
+
+aqui demuestro como me he conectado he pulsado un exit para que se vea que estoy conectado en y salgo y que la sesion se ha cerrado y vuelvo a mi usuario
 

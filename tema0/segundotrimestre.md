@@ -138,4 +138,13 @@ y ya solo queda hacer la consulta con dig
 
 ![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/soa.png)
 
+----------------actividad 8--------------------
 
+Ararancamos el servidor ssh
+ssh systemctl start sshd
+
+para que root no haga login en sshd_config hay que activar la opcion permit root loguin
+
+y para que escuche por el puerto 2222 en el mismo sitio cambiar la configuracion a el puerto 2222
+
+![]()

@@ -147,4 +147,24 @@ para que root no haga login en sshd_config hay que activar la opcion permit root
 
 y para que escuche por el puerto 2222 en el mismo sitio cambiar la configuracion a el puerto 2222
 
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/rooot.png)
+
+la actividad que dice que quitemos la fecha y hora es en el mismo lado solo que hay que modificar esta opcion
+
+PrintLastLog no
+
+inportante si esta comentada # hay que quitar el #
+
+ahora reiniciamos con 
+
+sudo systemctl restart ssh para que se aplique
+
+y procedemos a probarlo
+
+desde la maquina cliente hacer
+
+ssh usuario@la ip de la maquina -p el puerto asignado
 ![]()
+
+![]()
+

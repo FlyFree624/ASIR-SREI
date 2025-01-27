@@ -1,4 +1,5 @@
 ----------------actividad4--------------------
+
 **Obtén la dirección IP de los siguientes dominios: www.uhu.es, www.us.es, es.wikipedia.org**
 
 poner en la shell dig y el nombre del dominio
@@ -170,4 +171,61 @@ ssh usuario@la ip de la maquina -p el puerto asignado
 ![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/demostrar.png)
 
 aqui demuestro como me he conectado he pulsado un exit para que se vea que estoy conectado en y salgo y que la sesion se ha cerrado y vuelvo a mi usuario
+
+----------------actividad 8 subdominio--------------------
+
+# actividad 1 
+
+crear un script que cree subdominios
+
+#!/bin/bash
+
+echo "Ingrese el nombre del subdominio:"
+read dominio
+
+echo "Ingrese la dirección IP:"
+read ip
+
+if [[ $EUID -ne 0 ]]; then
+  exit 1
+fi
+
+echo "$ip $dominio" >> /etc/hosts
+
+# actividad 2
+
+#!/bin/bash
+
+echo "Ingrese el nombre del subdominio:"
+read dominio
+
+echo "Ingrese la dirección IP:"
+read ip
+
+if [[ $EUID -ne 0 ]]; then
+  exit 1
+fi
+INCLUDE="subdominio.txt"
+
+cat $INCLUDE
+echo "$ip $dominio" >> /etc/hosts
+
+"suponiendo que en la descripcion es subdominio.txt"
+
+# actividad 3
+
+hacer lo mismo pero en python
+
+este es el script
+
+import subprocess
+import os
+
+dominio = input("Ingrese el subdominio: ")
+ip = input("Ingrese la dirección IP: ")
+
+if os.geteuid() != 0:
+    exit(1)
+subprocess.popen(['cat', 'subdominio.txt']).communicate()
+subprocess.popen(['sh', '-c', f'echo "{ip} {dominio}" >> /etc/hosts'])
 

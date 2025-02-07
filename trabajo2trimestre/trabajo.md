@@ -211,7 +211,24 @@ sudo apt update && sudo apt upgrade -y
 
 - instalo docker
   sudo apt install -y docker-ce docker-ce-cli containerd.io
-  ![]()
+  
+  ![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/instalardocker.png)
+
+  [nota importante si aparece algun error al instalar haz un update]
+
+  - habilitamos y ejecutamos docker
+
+    sudo systemctl enable docker
+    sudo systemctl start docker
+
+    ponemos esto en la shell
+
+    vemos si esta corriendo escribiendo en la shell este comando de aqui
+
+    sudo systemctl status docker
+
+    ![]()
+  
   
 
 - procedo a realizar la actividad de el desarrollo de las prácticas especificadas en el tema de “Introducción a Docker”

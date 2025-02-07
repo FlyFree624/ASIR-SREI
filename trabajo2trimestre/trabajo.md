@@ -269,7 +269,9 @@ ScriptAlias /cgi-bin/ /usr/lib/cgi-bin/
 </Directory>
 
 
-![]()
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/zonya.png)
+
+
 
 # Reiniciar servicio DNS
 sudo systemctl restart bind9

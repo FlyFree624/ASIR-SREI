@@ -295,8 +295,43 @@ Habilitar Aplicaciones Python en el Servidor Web Edita el archivo de configuraci
     CustomLog ${APACHE_LOG_DIR}/access.log combined
 </VirtualHost>
 
+para que quede mas claro en postfix
 
+con nano abro
 
+sudo nano /etc/postfix/main.cf
+
+myhostname = tu-dominio.com
+myorigin = /etc/mailname
+mydestination = localhost, tu-dominio.com
+inet_interfaces = all
+inet_protocols = ipv4
+smtpd_banner = $myhostname ESMTP $mail_name
+home_mailbox = Maildir/
+
+reinicio y aplico los cambios
+
+en devcot
+
+sudo nano /etc/dovecot/dovecot.conf
+
+y pongo esto de aqui:
+
+mail_location = maildir:~/Maildir
+protocols = imap pop3
+disable_plaintext_auth = no
+
+edito la autenticacion
+
+sudo nano /etc/dovecot/conf.d/10-auth.conf
+
+disable_plaintext_auth = no
+auth_mechanisms = plain login
+
+reiniciamos
+
+sudo systemctl restart dovecot
+sudo systemctl enable dovecot
 
 
 **actividad 2**

@@ -230,6 +230,47 @@ ZONE_FILE="/etc/bind/db.ejemplo.com"
 echo "Creando subdominio $SUB_DOMAIN en DNS..."
 echo "$SUB_DOMAIN. IN A $IP" | sudo tee -a $ZONE_FILE
 
+**Script para Crear Usuarios y Webs**
+#!/bin/bash
+# Script para crear usuarios y su web
+
+if [ $# -lt 1 ]; then
+    echo "Uso: $0 nombre_usuario"
+    exit 1
+fi
+
+USER=$1
+DOCUMENT_ROOT="/var/www/html/$USER"
+
+# Crear usuario en Linux
+sudo useradd -m -d /home/$USER -s /bin/bash $USER
+echo "$USER:1234" | sudo chpasswd  
+
+# Crear directorio web
+sudo mkdir -p $DOCUMENT_ROOT
+sudo chown -R $USER:$USER $DOCUMENT_ROOT
+echo "<h1>Bienvenido $USER</h1>" > $DOCUMENT_ROOT/index.html
+
+echo "Usuario y página web creados correctamente."
+
+**Configurar Apache para Ejecutar Python**
+
+ Abre este archivo en tu servidor:
+ 
+nano /etc/apache2/sites-available/000-default.conf
+
+y añadir esto:
+
+ScriptAlias /cgi-bin/ /usr/lib/cgi-bin/
+<Directory "/usr/lib/cgi-bin">
+    AllowOverride None
+    Options +ExecCGI -MultiViews +SymLinksIfOwnerMatch
+    Require all granted
+</Directory>
+
+
+![]()
+
 # Reiniciar servicio DNS
 sudo systemctl restart bind9
 echo "Subdominio $SUB_DOMAIN configurado con éxito."

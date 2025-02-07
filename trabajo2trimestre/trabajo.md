@@ -191,4 +191,7 @@ primero actualizamos usando
 
 sudo apt update && sudo apt upgrade -y
 
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/doc.png)
+
+instalo los paquetes necesarios
 

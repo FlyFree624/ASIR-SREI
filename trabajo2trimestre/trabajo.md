@@ -195,3 +195,8 @@ sudo apt update && sudo apt upgrade -y
 
 instalo los paquetes necesarios
 
+
+procedo a realizar la actividad de el desarrollo de las prácticas especificadas en el tema de “Introducción a Docker”
+
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/actividad.png)
+

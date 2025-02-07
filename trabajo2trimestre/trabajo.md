@@ -183,6 +183,79 @@ reinicio apache
 
 sudo systemctl restart apache2
 
+para la crAutomatización con Scripts
+para crear usuarios y su hosting ponemos esye script
+
+#!/bin/bash
+# crear_usuario.sh usuario
+
+if [ $# -eq 0 ]; then
+    echo "Error! Debes introducir un nombre de usuario."
+    exit 1
+fi
+
+USER=$1
+DOCUMENT_ROOT="/var/www/html/$USER"
+USER_HOME="/home/$USER"
+
+# Crear usuario en el sistema
+sudo useradd -m -d $USER_HOME -s /bin/bash $USER
+echo "$USER:password123" | sudo chpasswd  # Cambia esto por una contraseña segura
+
+# Crear directorio web del usuario
+sudo mkdir -p $DOCUMENT_ROOT
+sudo chown -R $USER:$USER $DOCUMENT_ROOT
+sudo chmod -R 755 $DOCUMENT_ROOT
+
+# Crear página por defecto
+echo "<h1>Bienvenido $USER</h1>" > $DOCUMENT_ROOT/index.html
+
+echo "Usuario $USER creado con éxito y configurado en Apache."
+
+**configurar subdominios en BIND9:**
+
+#!/bin/bash
+# crear_subdominio.sh usuario ip
+
+if [ $# -le 1 ]; then
+    echo "Error! Debes introducir un usuario y una IP."
+    exit 1
+fi
+
+USER=$1
+IP=$2
+SUB_DOMAIN="${USER}.ejemplo.com"
+ZONE_FILE="/etc/bind/db.ejemplo.com"
+
+echo "Creando subdominio $SUB_DOMAIN en DNS..."
+echo "$SUB_DOMAIN. IN A $IP" | sudo tee -a $ZONE_FILE
+
+# Reiniciar servicio DNS
+sudo systemctl restart bind9
+echo "Subdominio $SUB_DOMAIN configurado con éxito."
+
+Habilitar Aplicaciones Python en el Servidor Web Edita el archivo de configuración de Apache (/etc/apache2/sites-available/000-default.conf) y poner esto
+
+<VirtualHost *:80>
+    ServerAdmin webmaster@localhost
+    DocumentRoot /var/www/html
+
+    # Permitir ejecución de Python
+    ScriptAlias /cgi-bin/ /usr/lib/cgi-bin/
+    <Directory "/usr/lib/cgi-bin">
+        AllowOverride None
+        Options +ExecCGI -MultiViews +SymLinksIfOwnerMatch
+        Require all granted
+    </Directory>
+
+    ErrorLog ${APACHE_LOG_DIR}/error.log
+    CustomLog ${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>
+
+
+
+
+
 **actividad 2**
 
 (proceder a la instalación de un servidor en docker)

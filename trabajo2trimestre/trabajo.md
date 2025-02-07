@@ -238,4 +238,91 @@ sudo apt update && sudo apt upgrade -y
 
 - creo una red docker
   
-![]()
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/reddocker.png)
+
+ [Creo un servidor DNS con bind9]
+ 
+  creamos un .sh con nano con este contenido
+
+  docker run -d --name dns_server \
+  --network mi_red \
+  -p 53:53/udp \
+  -p 53:53/tcp \
+  ubuntu/bind9
+
+  (al archivo lo llamo mi_red)
+
+[Creo un servidor web]
+
+creamos un .sh con nano con este contenido
+
+docker run -d --name web_server \
+  --network mi_red \
+  -p 8080:80 \
+  nginx
+
+(al archivo lo llamo mi_redd)
+
+- que la configuración del DNS y el servidor web se guarde creamos un .sh con nano con este contenido
+
+  docker run -d --name dns_server \
+  --network mi_red \
+  -p 53:53/udp \
+  -p 53:53/tcp \
+  -v $(pwd)/dns_config:/etc/bind \
+  ubuntu/bind9
+
+  al archivo lo llamos dns_config.sh
+
+  - para nginx crer un fichero con nano con este contenido
+    
+    docker run -d --name web_server \
+  --network mi_red \
+  -p 8080:80 \
+  -v $(pwd)/html:/usr/share/nginx/html \
+  nginx
+
+al fichero lo llamo html.sh
+
+- creo un docker compose para automatizar
+
+  version: "3"
+services:
+  dns:
+    image: ubuntu/bind9
+    container_name: dns_server
+    networks:
+      - mi_red
+    ports:
+      - "53:53/udp"
+      - "53:53/tcp"
+    volumes:
+      - ./dns_config:/etc/bind
+
+  web:
+    image: nginx
+    container_name: web_server
+    networks:
+      - mi_red
+    ports:
+      - "8080:80"
+    volumes:
+      - ./html:/usr/share/nginx/html
+
+networks:
+  mi_red:
+    driver: bridge
+
+fichero llamado docker-compose.yml
+
+para ejecutarlo usamos el comando docker-compose up -d
+
+demostramos que tanto el servidor web como el dns estan funcionando
+
+escribimos
+
+http://localhost:8080 en la barra de busqueda
+
+
+
+

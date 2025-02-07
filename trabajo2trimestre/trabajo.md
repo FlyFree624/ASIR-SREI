@@ -227,11 +227,15 @@ sudo apt update && sudo apt upgrade -y
 
     sudo systemctl status docker
 
-    ![]()
-  
-  
+    ![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/dockercorriendo.png)
 
+    y aqui comprobamos que esta corriendo perfectamente
+
+    
 - procedo a realizar la actividad de el desarrollo de las prácticas especificadas en el tema de “Introducción a Docker”
 
 ![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/actividad.png)
 
+- creo una red docker
+  
+![]()

@@ -182,3 +182,13 @@ sudo a2ensite example.com.conf
 reinicio apache
 
 sudo systemctl restart apache2
+
+**actividad 2**
+
+(proceder a la instalación de un servidor en docker)
+
+primero actualizamos usando
+
+sudo apt update && sudo apt upgrade -y
+
+

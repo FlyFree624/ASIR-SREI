@@ -323,6 +323,16 @@ escribimos
 
 http://localhost:8080 en la barra de busqueda
 
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/serngx.png)
+
+probamos la ejecucion de los servideres DNS
+
+docker exec -it mi_nginx nslookup google.com dns_server o su ip
+
+![]()
+
+
+
 
 
 

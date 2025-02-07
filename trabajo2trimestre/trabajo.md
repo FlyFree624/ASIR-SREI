@@ -200,9 +200,17 @@ sudo apt update && sudo apt upgrade -y
 - agrego la clave gpg de docker
   pongo el comando aqui por si en la imagen no se precia bien
   curl -fsSL https://download.docker.com/linux/debian/gpg | sudo tee /usr/share/keyrings/docker-archive-keyring.gpg
-  ![]()
+  ![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/gpg.png)
+  
+- agrego el repositorio de docker
+  pongo el comando por si en la imagen no se aprecia bien
 
-procedo a realizar la actividad de el desarrollo de las prácticas especificadas en el tema de “Introducción a Docker”
+  echo "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/debian bookworm stable" | sudo tee /etc/apt/sources.list.d/docker.list
+
+![]()
+  
+
+- procedo a realizar la actividad de el desarrollo de las prácticas especificadas en el tema de “Introducción a Docker”
 
 ![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/actividad.png)
 

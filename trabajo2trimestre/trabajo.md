@@ -207,7 +207,11 @@ sudo apt update && sudo apt upgrade -y
 
   echo "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/debian bookworm stable" | sudo tee /etc/apt/sources.list.d/docker.list
 
-![]()
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/aof.png)
+
+- instalo docker
+  sudo apt install -y docker-ce docker-ce-cli containerd.io
+  ![]()
   
 
 - procedo a realizar la actividad de el desarrollo de las prácticas especificadas en el tema de “Introducción a Docker”

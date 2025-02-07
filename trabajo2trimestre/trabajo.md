@@ -187,14 +187,20 @@ sudo systemctl restart apache2
 
 (proceder a la instalación de un servidor en docker)
 
-primero actualizamos usando
+- primero actualizamos usando
 
 sudo apt update && sudo apt upgrade -y
 
 ![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/doc.png)
 
-instalo los paquetes necesarios
+- instalo los paquetes necesarios
 
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/adoc.png)
+
+- agrego la clave gpg de docker
+  pongo el comando aqui por si en la imagen no se precia bien
+  curl -fsSL https://download.docker.com/linux/debian/gpg | sudo tee /usr/share/keyrings/docker-archive-keyring.gpg
+  ![]()
 
 procedo a realizar la actividad de el desarrollo de las prácticas especificadas en el tema de “Introducción a Docker”
 

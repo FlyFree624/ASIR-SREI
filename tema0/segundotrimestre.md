@@ -229,3 +229,15 @@ if os.geteuid() != 0:
 subprocess.popen(['cat', 'subdominio.txt']).communicate()
 subprocess.popen(['sh', '-c', f'echo "{ip} {dominio}" >> /etc/hosts'])
 
+----------------actividad de Instalación de Wordpress en instancia Debian(o Ubuntu) EC2 con soporte de base de datos RDS y EFS--------------------
+
+voy a utilizar vitual box por razones me es complicado usar aws y para hacer la actividad he decido proceder a hacerla en virtual box
+
+creamos una nueva maquina y palicamos dos configuraciones de red
+
+una tipo nat y la otra tipo red interna
+
+![]()
+![]()
+
+

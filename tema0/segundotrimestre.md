@@ -259,7 +259,12 @@ sudo systemctl start apache2
 ![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/wor.png)
 
 En el navegador: http://<IP> para ver que esta corriendo
-![]()
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/woor.png)
+
 y aqui esta la prueba de que lo está
+
+Instalar NFS
+
+sudo apt install nfs-common -y
 
 

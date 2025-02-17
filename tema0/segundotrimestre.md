@@ -237,7 +237,7 @@ creamos una nueva maquina y palicamos dos configuraciones de red
 
 una tipo nat y la otra tipo red interna
 
-![]()
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/nat.png)
 ![]()
 
 

@@ -256,6 +256,10 @@ habilitamos el servicio
 sudo systemctl enable apache2
 sudo systemctl start apache2
 
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/wor.png)
+
+En el navegador: http://<IP> para ver que esta corriendo
 ![]()
+y aqui esta la prueba de que lo está
 
 

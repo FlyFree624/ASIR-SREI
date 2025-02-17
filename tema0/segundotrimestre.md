@@ -267,4 +267,107 @@ Instalar NFS
 
 sudo apt install nfs-common -y
 
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/wnfs.png)
+
+y este otro tambien 
+
+sudo apt install nfs-kernel-server -y
+
+
+cremos un directorio de montaje
+
+sudo mkdir /mnt/efs
+
+Montamos almacenamiento compartido
+
+sudo mount -t nfs 10.0.2.15:/mnt/efs /mnt/efs
+
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/www.png)
+
+si da un error como este
+
+sudo mount -t nfs 10.0.2.15:/mnt/efs /mnt/efs
+mount.nfs: access denied by server while mounting 10.0.2.15:/mnt/efs
+
+seguramente sea por la línea de configuración
+
+poner esto para solucionarlo
+
+sudo nano /etc/exports
+
+/mnt/efs 10.0.2.0/24(rw,sync,no_subtree_check,no_root_squash)
+
+sudo exportfs -ra para aplicar cambios
+
+
+Configuración de Base de Datos RDS
+
+
+instalamos mysql server
+
+sudo apt install mysql-server -y
+
+configuramos el usuario de la base de datos
+
+sudo mysql
+CREATE DATABASE wordpress;
+CREATE USER 'wordpressuser'@'%' IDENTIFIED BY 'password';
+GRANT ALL PRIVILEGES ON wordpress.* TO 'wordpressuser'@'%';
+FLUSH PRIVILEGES;
+EXIT;
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/wdb.png)
+
+Instalar WordPress
+
+cd /var/www/html
+sudo wget https://wordpress.org/latest.tar.gz
+sudo tar -xvzf latest.tar.gz
+sudo chown -R www-data:www-data wordpress
+
+Configurar acceso a la base de datos en el archivo wp-config.php
+
+sudo cp /var/www/html/wordpress/wp-config-sample.php /var/www/html/wordpress/wp-config.php
+sudo nano /var/www/html/wordpress/wp-config.php
+
+DB_NAME: wordpress
+
+DB_USER: wordpressuser
+
+DB_PASSWORD: password
+
+DB_HOST:(IP del servidor de base de datos)10.0.2.15
+
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/zinc.png)
+
+para acceder a wordpres en el navegador escribimos 
+http://<IP>/wordpress
+
+
+por si da fallo
+
+Configurar MySQL para acceso remoto
+editamos el archivo de configuración y permitir conexiones remotas
+
+sudo nano /etc/mysql/mysql.conf.d/mysqld.cnf
+
+Cambiar bind-address de 127.0.0.1 a 0.0.0.0
+
+Reiniciar el servicio:
+
+sudo systemctl restart mysql
+
+Permitir tráfico en el puerto 3306
+
+Agregar regla al firewall:
+
+sudo iptables -A INPUT -p tcp --dport 3306 -s 10.0.2.0/24 -j ACCEPT
+
+Asignar permisos al directorio de WordPress
+
+sudo chown -R www-data:www-data /var/www/html/wordpress
+sudo chmod -R 755 /var/www/html/wordpress
+
+
+
+
 

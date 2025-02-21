@@ -339,8 +339,7 @@ DB_HOST:(IP del servidor de base de datos)10.0.2.15
 
 ![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/zinc.png)
 
-para acceder a wordpres en el navegador escribimos 
-http://<IP>/wordpress
+**para acceder a wordpres en el navegador escribimos http://<IP>/wordpress**
 
 
 por si da fallo

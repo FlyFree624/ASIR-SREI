@@ -62,7 +62,7 @@ importamos la clave GPG de Docker:
    ![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/ydocc.png)
    
 **Lleva a cabo la práctica descrita en el segundo artículo**
-
+paso 4:
   **crearse una cuenta en docker hub**
 
    parte 1:
@@ -101,11 +101,32 @@ y dentro del src poner un codigo de prueba
 
 construimos la imagen
 
-docker build -t tu_usuario/mi_app:1.0 .
+docker build -t josepepe313/mi_app:1.0 .
 
-![]()
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/zyic.png)
 
+parte 3:
 
+Ejecútalo
+
+docker run -d -p 3000:3000 josepepe313/mi_app:1.0
+
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/zzpssso.png)
+
+paso 5:
+
+Publícalo
+
+docker login
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/yyrrr.png)
+
+Etiquetar la imagen
+
+docker tag mi_app:1.0 josepepe313/mi_app:1.0
+
+Subir la imagen a Docker Hub:
+
+docker push josepepe313/mi_app:1.0
 
 **-----------------------------ACTIVIDAD 3-----------------------------------------------------**
 

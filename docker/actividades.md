@@ -35,6 +35,76 @@ importamos la clave GPG de Docker:
   ![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/yhabi.png)
 
 **-----------------------------ACTIVIDAD 2-----------------------------------------------------**
+ **Lleva a cabo la práctica descrita en el primer artículo**
+
+   parte 1:
+   Ejecuta la imagen "hello-world"
+   
+   docker run hello-world
+   
+   ![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/zdoc.png)
+   
+   parte 2:
+   Muestra las imágenes Docker instaladas
+   
+   docker images
+   
+   ![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/yim.png)
+   
+   parte 3:
+   
+   Muestra los contenedores Docker
+
+   docker ps (este muestra solo los activos)
+
+   docker ps -a (este muestra todos tanto los activos como los inactivos)
+
+   ![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/ydocc.png)
+   
+**Lleva a cabo la práctica descrita en el segundo artículo**
+
+  **crearse una cuenta en docker hub**
+
+   parte 1:
+
+   **Edita el fichero Dockerfile**
+
+   crear un directorio para el y acceder a el
+
+   mkdir mi_app && cd mi_app
+
+   dentro de ese directorio crear un archivo sin extension con este contenido
+
+FROM node:lts-alpine
+WORKDIR /app
+COPY . .
+RUN npm install
+EXPOSE 3000
+CMD ["node", "src/index.js"]
+
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/zzpo.png)
+
+parte 2:
+**Construye el contenedor**
+
+hay que crear dos archivos un package.json y un src
+
+package.joson
+
+ejecutar npm init y seguir las preguntas que te hacen
+
+crear el directorio src
+
+mkdir src && touch src/index.js
+
+y dentro del src poner un codigo de prueba
+
+construimos la imagen
+
+docker build -t tu_usuario/mi_app:1.0 .
+
+![]()
+
 
 
 **-----------------------------ACTIVIDAD 3-----------------------------------------------------**

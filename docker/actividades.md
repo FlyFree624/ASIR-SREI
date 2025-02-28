@@ -229,10 +229,55 @@ docker rm $(docker ps -a -q)
 
 **-----------------------------ACTIVIDAD 4-----------------------------------------------------**
 
+**ejemplo1:**
+ Crear un volumen llamado mi_volumen
+
+ docker volume create mi_volumen
+
+ ejecutar un contenedor utilizando el volumen
+
+ docker run -d --name contenedor_nginx -v mi_volumen:/usr/share/nginx/html nginx
+
+ ![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/yydockerf.png)
+ 
+**ejemplo2:**
+
+ Crear un directorio en el host
+
+ mkdir -p ~/docker_bind_mount
+echo "Hola desde Bind Mount" > ~/docker_bind_mount/index.html
+
+docker run -d --name contenedor_nginx_bind -v ~/docker_bind_mount:/usr/share/nginx/html nginx
+
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/yzfocker.png)
+
+despues al ejecutar en el navegador http://localhost aparecerá el texto Bind Mount
+
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/zzydockernav.png)
+
+
+**ejemplo3:**
+
+Crear una red personalizada
+
+docker network create mi_red
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/zdockerred.png)
+
+con esto ejecutamos dos contenedores en la misma red
+
+docker run -d --name contenedor1 --network mi_red alpine sleep 1000
+docker run -d --name contenedor2 --network mi_red alpine sleep 1000
+
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/zdockerred.png)
+
+verificamos la conectividad
+ping contenedor2
 
 
 
 **-----------------------------ACTIVIDAD 5-----------------------------------------------------**
+
+
 
 
 **-----------------------------ACTIVIDAD 6-----------------------------------------------------**

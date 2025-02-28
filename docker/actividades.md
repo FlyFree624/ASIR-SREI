@@ -129,9 +129,107 @@ Subir la imagen a Docker Hub:
 docker push josepepe313/mi_app:1.0
 
 **-----------------------------ACTIVIDAD 3-----------------------------------------------------**
+**parte 1:**
 
+Descarga la imagen de ubuntu
+
+docker pull ubuntu
+
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/yino.png)
+
+**parte 2:**
+
+Descarga la imagen de hello-world
+
+docker pull hello-world
+
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/yino.png)
+
+**parte 3:**
+
+Descarga la imagen nginx
+
+docker pull nginx
+
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/yino.png)
+
+**parte 4:**
+
+Muestra un listado de todas la imágenes
+
+docker images
+
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/zimagen.png)
+
+**parte 5:**
+
+Ejecuta un contenedor hello-world y dale nombre “myhello1”
+
+docker run --name myhello1 hello-world
+
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/zzmiyon.png)
+
+**parte 6:**
+
+Ejecuta un contenedor hello-world y dale nombre “myhello2”
+
+docker run --name myhello2 hello-world
+
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/zwzyon.png)
+
+**parte 7:**
+
+Ejecuta un contenedor hello-world y dale nombre “myhello3”
+
+docker run --name myhello3 hello-world
+
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/zwzpon.png)
+
+**parte 8:**
+
+Muestra los contenedores que se están ejecutando
+
+docker ps
+
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/zzwwe.png)
+
+**parte 9:**
+
+Para el contenedor "myhello1”
+
+docker stop myhello1
+
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/ystop1y2.png)
+
+**parte 10:**
+
+Para el contenedor "myhello2”
+docker stop myhello2
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/ystop1y2.png)
+
+**parte 11:**
+Borra el contenedor “myhello1”
+
+docker rm myhello1
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/zzwedockerfin.png)
+
+**parte 12:**
+
+Muestra los contenedores que se están ejecutando.
+
+docker ps -a
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/zzwedockerfin.png)
+
+**parte 13:**
+
+Borra todos los contenedores
+
+docker rm $(docker ps -a -q)
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/zzwedockerfin.png)
 
 **-----------------------------ACTIVIDAD 4-----------------------------------------------------**
+
+
 
 
 **-----------------------------ACTIVIDAD 5-----------------------------------------------------**

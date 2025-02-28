@@ -277,9 +277,49 @@ ping contenedor2
 
 **-----------------------------ACTIVIDAD 5-----------------------------------------------------**
 
+**ejemplo1:**
+
+git clone https://github.com/josedom24/curso_docker_ies.git
+cd curso_docker_ies/modulo4
+
+Inicia los servicios con Docker Compose
+docker-compose up -d
+
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/zindockercompose.png)
+
+Verifica que los contenedores estén en funcionamiento:
+
+docker-compose ps
+
+**ejemplo2:**
+
+Despliegue de la aplicación
+
+entrar al directorio tempe y hacer lo mismo que arriba
+
+docker-compose up -d
+
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/zindockercompose.png)
+
+Verifica que los contenedores estén en funcionamiento:
+
+docker-compose ps
 
 
+**ejemplo3:**
+
+entrar al directorio wordpress y hacer lo mismo que arriba
+
+docker-compose up -d
+
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/zindockercompose.png)
+
+Verifica que los contenedores estén en funcionamiento:
+
+docker-compose ps
 
 **-----------------------------ACTIVIDAD 6-----------------------------------------------------**
+
+
 
 

@@ -320,6 +320,102 @@ docker-compose ps
 
 **-----------------------------ACTIVIDAD 6-----------------------------------------------------**
 
+**ejemplo1:**
+ crear un public_html
 
+ # syntax=docker/dockerfile:1
+FROM debian:stable-slim
+RUN apt-get update && apt-get install -y apache2 && apt-get clean && rm -rf /var/lib/apt/lists/*
+WORKDIR /var/www/html/
+COPY public_html .
+EXPOSE 80
+CMD apache2ctl -D FOREGROUND
+
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/6docker.png)
+
+ejecutar el siguiente comando para construir la imagen
+
+docker build -t josedom24/ejemplo1:v1 .
+
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/7docker.png)
+
+ ejecutamos el contenedor
+
+docker run -d -p 80:80 --name ejemplo1 josedom24/ejemplo1:v1
+
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/88.png)
+
+y al poner localhost en la barra de navegacion aparece nuestra web
+
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/8.png)
+
+**ejemplo 2 Construcción de imágenes con una una aplicación Python**
+ lo mismo de antes pero el dockerfile tendrá este contenido
+
+ # syntax=docker/dockerfile:1
+FROM debian:12
+RUN apt-get update && apt-get install -y python3-pip  && apt-get clean && rm -rf /var/lib/apt/lists/*
+WORKDIR /usr/share/app
+COPY app .
+RUN pip3 install --no-cache-dir --break-system-packages -r requirements.txt
+EXPOSE 3000
+CMD python3 app.py
+
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/9.png)
+
+y no olvidar crear un app.py
+
+luego ejecutar este comnando
+
+docker build -t josedom24/ejemplo3:v1 .
+
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/7docker.png)
+
+y este otro para crear el contenedor
+
+docker run -d -p 80:3000 --name ejemplo2 josedom24/ejemplo3:v1
+
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/88.png)
+
+y al poner localhost en la barra de navegacion aparece nuestra web
+
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/8.png)
+
+**ejemplo 3 Construcción de imágenes con una una aplicación PHP**
+
+ crar el archivo info.php
+
+ echo "<?php phpinfo(); ?>" > app/info.php
+
+ ![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/99.png)
+
+ modificar el dockerfile con esto
+
+ # syntax=docker/dockerfile:1
+FROM debian:stable-slim
+RUN apt-get update && apt-get install -y apache2 libapache2-mod-php7.4 php7.4 && apt-get clean && rm -rf /var/lib/apt/lists/* && rm /var/www/html/index.html
+COPY app /var/www/html/
+EXPOSE 80
+CMD apache2ctl -D FOREGROUND
+
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/999.png)
+
+construir imagen 
+
+con este comando de aqui
+
+docker build -t josedom24/ejemplo2:v1 .
+
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/7docker.png)
+
+crear contenedor con este comando de aqui
+
+docker run -d -p 80:80 --name ejemplo2 josedom24/ejemplo2:v1
+
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/88.png)
+
+y al poner localhost en la barra de navegacion aparece nuestra web
+
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/8.png)
 
 

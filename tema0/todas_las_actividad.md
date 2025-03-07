@@ -724,3 +724,35 @@ abajo crear otro virtualhost
 guardar y cerrar
 sudo apachectl configtest
 sudo systemctl reload apache2
+Apache utilizará el puerto 81 además del 80
+
+En /etc/httpd/conf/httpd.conf, poner listen 81, luego en la configuración del VirtualHost,  añado la misma IP pero con el otro puerto
+
+Añadir el dominio “marisma.intranet” en el fichero “hosts”
+
+En /etc/hosts/ poner la ip y al lado el marisma.intranet
+
+Cambia la directiva “ServerTokens” para mostrar el nombre del producto.
+
+directiva sever Sigmtme
+
+Haz que se visualice el pie de página de Apache en tu navegador
+
+solo hay que poner 127.0.0.1 o localhost en la direccion url
+	
+Crea un directorio “prueba” y otro directorio “prueba2”. Incluye un par de páginas en cada una de ellas.
+
+en DoccumentRoot que esta en /var/www/html
+y hay es donde pongo la pagina para que se muestre al escribir tu el 127.0.0.1
+	
+Redirecciona el contenido de la carpeta “prueba” hacia “prueba2”
+
+en redirect directive
+ 
+Es posible redireccionar tan solo una página en lugar de toda la carpeta. Pruébalo.
+	
+Usa la directiva userdir
+	
+Usa la directiva alias para redireccionar a una carpeta dentro del directorio de usuario.
+	
+¿Para qué sirve la directiva Options y dónde aparece. Comprueba si apache indexa los directorios. Si es así, ¿cómo lo desactivamos?

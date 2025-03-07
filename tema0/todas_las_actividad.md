@@ -756,3 +756,42 @@ Usa la directiva userdir
 Usa la directiva alias para redireccionar a una carpeta dentro del directorio de usuario.
 	
 ¿Para qué sirve la directiva Options y dónde aparece. Comprueba si apache indexa los directorios. Si es así, ¿cómo lo desactivamos?
+
+**apuntes**
+directorio de configuracion: /etc/apache2/apache2.conf
+arrancar apache: sudo service apache2 start
+reiniciar apache: sudo service apache2 restart
+apagar apache: sudo service apache2 stop
+
+comprobar que los ficheros de configuracion estan mal escritos siempre hacer: sudo apache2ctl configtest
+
+server tokens da el nombre, version, que se esta ejecutando, 
+buscar en la pagina de apache y ver la directtiva que corresponde
+
+se modifica poniendo en el fichero de configuracion (/etc/apache2/ports.conf) y poner la directiva ahu, luego, apagar, un apachectl configstest y arrancar
+
+para redireccionar paginas:
+
+en el Documentroot crear los directorios que es donde se crean los directorios para servir a apache
+ en nuestro caso es /var/www/html crear el fichero hay
+la redireccion se puede acer en server config, virtualhost, directory, .htacces
+
+me meto en server config y escribo
+Redirect "[la pagina mia]" "[la url a laque yo la quiero mandar]"
+
+directiva: UserDir  pero hay que activar el user mod
+
+en /etc/apache2/apache2.conf escribo UserDir y la pagina mia
+
+para activar el user mod:
+
+escibir sudo a2enmod userdir
+
+apachectl configstest
+
+los ficheros log estan ev /var/log/apache2
+para asignar directivas:
+alias: "imagen"  /home/usr/images
+poner <Directory "^[la ruta la que he asignado antes /home/usr/images]">
+                          Require all grauted
+</Directory>

@@ -9,8 +9,8 @@ Este repositorio incluye actividades llevadas a cabo en el módulo nombredelmód
 | ----------- | ------------- |
 | Ejercicio 1 |       https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/README.md        |
 | todas las actividades 2º trimestre  |  https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/segundotrimestre.md         |
-| todas las actividades realizadas |    https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/todas_las_actividad.md           |
-| Ejercicio 4 |   https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/README.md            |
+| trabajo 1º trimestre |    https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/todas_las_actividad.md           |
+| trabajo 2º trimestre|   https://github.com/FlyFree624/ASIR-SREI/blob/main/trabajo2trimestre/trabajo.md            |
 | Ejercicio 5 | https://github.com/FlyFree624/ASIR-SREI/edit/main/tema0/README.md          |
 
 

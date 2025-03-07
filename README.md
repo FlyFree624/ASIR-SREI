@@ -11,6 +11,6 @@ Este repositorio incluye actividades llevadas a cabo en el módulo nombredelmód
 | todas las actividades 2º trimestre orden que se puso en moodle lo nombre como actividad y su numero |  https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/segundotrimestre.md         |
 | trabajo 1º trimestre |    https://github.com/FlyFree624/ASIR-SREI/blob/main/trabajo1trimestre/trabajo.md           |
 | trabajo 2º trimestre|   https://github.com/FlyFree624/ASIR-SREI/blob/main/trabajo2trimestre/trabajo.md            |
-| Ejercicio 5 | https://github.com/FlyFree624/ASIR-SREI/edit/main/tema0/README.md          |
+| practica aws | https://github.com/FlyFree624/ASIR-SREI/edit/main/tema0/README.md          |
 
 

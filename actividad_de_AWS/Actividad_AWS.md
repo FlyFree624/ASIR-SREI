@@ -62,3 +62,9 @@ habilitamos ssl
  sudo a2enmod ssl 
 reiniciamos apache
  sudo systemctl restart apache2
+
+
+ ---------- Instalación de WordPress con EC2, RDS y EFS-----------------
+
+
+ 

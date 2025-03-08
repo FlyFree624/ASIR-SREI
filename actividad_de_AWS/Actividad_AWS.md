@@ -65,6 +65,92 @@ reiniciamos apache
 
 
  ---------- Instalación de WordPress con EC2, RDS y EFS-----------------
+procedo a cpmenzar a hacer la activadad
+ primero que nada escribo
+ aws sts get-caller-identity para ver si tengo acceso aws-cli
+ ![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/1aws.png)
+ nos muestra que tenemos acceso lo vemos porque nos muestra un id y Account ID
+
+ Creamos una instancia EC2
+
+ aws ec2 run-instances --image-id ami-0c02fb55956c7d316 --count 1 --instance-type t3.micro --key-name MyKeyPair --security-groups default --query 'Instances[0].InstanceId'
+
+ pero primero hay que crear una clave ssh
+
+ aws ec2 create-key-pair --key-name MiClaveAWS --query 'KeyMaterial' --output text > MiClaveAWS.pem
+
+ y le asignamos los permisos
+
+ chmod 400 MiClaveAWS.pem
+
+ luego ya podemos hacer uso de este comando
+ 
+aws ec2 run-instances --image-id ami-0c02fb55956c7d316 --count 1 --instance-type t3.micro --key-name MiClaveAWS --security-groups default --query 'Instances[0].InstanceId'
+
+ "i-0bb45fd0cbb1d41d5"
+
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/2aws.png)
+
+crear una bd con rds
+
+aws rds create-db-instance --db-instance-identifier MiDBWordPress --db-instance-class db.t3.micro --engine mysql --master-username admin --master-user-password "Contrasena123" --allocated-storage 20 --no-publicly-accessible
+
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/3aws.png)
+
+Conectar EC2 a RDS
+aws rds describe-db-instances --db-instance-identifier MiDBWordPress --query "DBInstances[0].Endpoint.Address"
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/4aws.png)
+
+ahora configuramos la base de datos
+
+sudo nano /var/www/html/wp-config.php
+
+donde pone define('DB_HOST', 'localhost'); cambiamos localhost por esto midbwordpress.cfmjptxu6lnr.us-east-1.rds.amazonaws.com
+
+que asin
+
+define('DB_HOST', 'midbwordpress.cfmjptxu6lnr.us-east-1.rds.amazonaws.com');
+
+conectarse con ssh
+
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/5aws.png)
+
+una vez ya todo procedemos a instalar el mysql php y el wordpress
+
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/6aws.png)
+
+puse el fondo negro porque me estaba confundiendo 
+
+he usado este comando para intalar wordpress
+
+cd /var/www/html
+sudo wget https://wordpress.org/latest.tar.gz
+sudo tar -xvzf latest.tar.gz
+sudo mv wordpress/* .
+sudo chown -R apache:apache /var/www/html/*
+
+editamos el archivo wp-config.php y reiniciamos apache como siempre
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/7aws.png)
+
+con sudo systemctl restart httpd
+
+y una vez intalado todo ponemos nuestra ip en el navegador y accedemos a wordpress
+
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/8aws.png)
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
  

@@ -138,6 +138,90 @@ y una vez intalado todo ponemos nuestra ip en el navegador y accedemos a wordpre
 
 ![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/8aws.png)
 
+-------------------practica del aws final es esta-------------------------------------------------------------------------------------------------------
+
+**entrar al laboratorio**
+
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/fin1aws.png)
+
+dar en crear vpc
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/fin2aws.png)
+
+se empieza a crear el flujo
+
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/fin3aws.png)
+
+**creacion maquinas ec2**
+
+dar al mismo sitio que crear la vpc pero en vez de poner vpc ec2
+
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/fin4aws.png)
+
+entrar y dar en lanzar instancia, una vez dentro elegimos el S.O
+
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/fin5aws.png)
+
+asignamos el par de claves
+
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/fin6aws.png)
+
+configuramos la vpc y la subred
+
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/fin7aws.png)
+
+creamos las reglas 
+
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/fin8aws.png)
+
+y dar en lanzar
+
+procedemos a la instalacion
+
+instalar la clave ppk
+
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/fin9aws.png)
+
+copiar el dns publico de la instancia
+
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/fin10aws.png)
+
+en putty debe de quedar asi
+
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/fin11aws.png)
+
+y en browser ponemos la clave ppk que hemos descargado antes
+
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/fin12aws.png)
+
+y aqui como accedemos a la instancia
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/fin13aws.png)
+
+realizamos un update y un upgrade y a instalar apache y php
+
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/fin14aws.png)
+
+he usado esto para instalar php
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/fin15aws.png)
+
+**procedemos a crear la BD con RDS**
+
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/fin16aws.png)
+
+le damos a crear
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/fin17aws.png)
+
+le clickamos a mysql y escogemos la capa gratis
+
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/fin18aws.png)
+
+establecemos una password
+
+![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/fin19aws.png)
+
+la password es: Aceitunaconhueso
+
+elegimos esta opcion
+![image](https://github.com/user-attachments/assets/bfd7818f-b8e6-45e3-a88b-062db7de9b5e)
 
 
 

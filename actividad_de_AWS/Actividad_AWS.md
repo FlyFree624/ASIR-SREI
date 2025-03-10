@@ -218,10 +218,66 @@ establecemos una password
 
 ![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/fin19aws.png)
 
-la password es: Aceitunaconhueso
+la password es: aceituna
 
 elegimos esta opcion
+
 ![image](https://github.com/user-attachments/assets/bfd7818f-b8e6-45e3-a88b-062db7de9b5e)
+
+y darle a crear
+
+![image](https://github.com/user-attachments/assets/a9a8a71a-2c8c-457f-b9c0-8889d58c1f5b)
+
+y ahora pulsamos en la bd y le damos aqui
+
+![image](https://github.com/user-attachments/assets/fc901a7d-1152-4164-a1c8-f2e311ee16c6)
+
+ponemos el nombre de nuestra instancia
+
+![image](https://github.com/user-attachments/assets/4a7bbe35-e15d-42f9-9107-caad9c9d630f)
+
+y dar en continuar
+
+crear el sistema de archivo efs
+
+![image](https://github.com/user-attachments/assets/a01d4d24-c772-4f7a-b470-3cb23f8c3814)
+
+
+le damos a crear
+![image](https://github.com/user-attachments/assets/09f0e3ec-9b5b-4cd4-a898-849f6b1add55)
+
+![image](https://github.com/user-attachments/assets/c99e9031-e047-4664-8a09-5fdb0b023a5f) y dar a crear
+
+procedemos a instalar wordpress y mysql
+
+![image](https://github.com/user-attachments/assets/2cb25562-2bdf-4ecd-be11-7b7c513d9ec4)
+
+![image](https://github.com/user-attachments/assets/c1b340ec-4bfb-48de-8cb7-5e83ead51335)
+
+nos conectamos a la base de datos
+
+![image](https://github.com/user-attachments/assets/1cad6fb3-e16b-46be-a823-9eee0c284451)
+
+creamos una bd para wordpress
+
+![image](https://github.com/user-attachments/assets/2510155c-aaa9-4b3b-a3ed-a361bd1c753e)
+
+y ya solo queda poner nuestra ip publica en el navegador y carga wordpress
+
+![image](https://github.com/user-attachments/assets/c310a8e3-84fc-42ec-a47a-6353379729a1)
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

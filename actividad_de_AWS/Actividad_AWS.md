@@ -267,6 +267,7 @@ y ya solo queda poner nuestra ip publica en el navegador y carga wordpress
 ![image](https://github.com/user-attachments/assets/c310a8e3-84fc-42ec-a47a-6353379729a1)
 
 
+![image](https://github.com/user-attachments/assets/29a5d7f5-d1a1-4d2c-a690-1970859e1cfe)
 
 
 

@@ -233,6 +233,33 @@ cremos uno de nuevo y vemos como el contenido no se borra
 ![image](https://github.com/user-attachments/assets/68604cb3-a8c0-44c5-8bee-929bef731228)
 
 
+ejemplo 2 **Despliegue de la aplicación Guestbook**
+
+docker network create guestbook
+![image](https://github.com/user-attachments/assets/c1914da8-6b28-46c5-a866-c3de8f626862)
+
+recordar que hace falta el uso de redis
+
+para ejecutarlo
+
+docker run -d --name redis --network guestbook -v /opt/redis:/data redis redis-server --appendonly yes
+
+![image](https://github.com/user-attachments/assets/7f167ecd-0a8b-4bcf-8cbe-e9026ff38039)
+
+docker run -d -p 80:5000 --name guestbook --network red_guestbook iesgn/guestbook
+
+![image](https://github.com/user-attachments/assets/f56629e1-dc12-40f7-a377-242c44c67f9d)
+
+he usado otro nombre y puerto porque me daba error porque ya existia
+
+y como ves poniendo localhost y el puerto accedo a guestbook
+
+![image](https://github.com/user-attachments/assets/df30e3f8-4357-4f4c-be2f-89c034fef894)
+
+
+ejemplo 3
+
+
 
 
 

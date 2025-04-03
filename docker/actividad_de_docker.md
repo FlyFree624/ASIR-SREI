@@ -197,6 +197,49 @@ docker rm -f $(docker ps -aq)
 no lo pongo en captura para que se vea que esta hecho porque si no puede tender a confusion que no lo he hecho (me ha pasado en varias ocasiones y prefiero no ejecutar lo de borrado para que no tienda a errores)
 
 
+-----------------------------ACTIVIDAD 4----------------------------------------------------- 
+
+ejemplo 1: **Asociando almacenamiento a los contenedores: volúmenes Docker**
+
+creamos un volumen
+
+docker volume create web
+
+![image](https://github.com/user-attachments/assets/15933a43-d1be-44c3-addc-bfaa4e460884)
+
+para continuar hay que tener instalado apache
+
+creamos un contenedor con el volumen asociado, usando -v, y creamos un fichero index.html
+
+docker run -d --name my-apache-app -v web:/usr/local/apache2/htdocs -p 8080:80 httpd:2.4
+
+![image](https://github.com/user-attachments/assets/4b5dfbf9-692d-48c8-8fea-6023547239f9)
+
+le metemos informacion dentro
+
+docker exec my-apache-app bash -c 'echo "<h1>Hola</h1>" > /usr/local/apache2/htdocs/index.html'
+
+![image](https://github.com/user-attachments/assets/3aa4a713-d88d-4e9a-86e8-ccd22f6011b6)
+
+le hacemos un curl 
+![image](https://github.com/user-attachments/assets/d7978e51-8443-458b-93da-d8ea870d82d6)
+
+lo borramos
+
+![image](https://github.com/user-attachments/assets/12477743-2bca-4ec7-a2aa-c719002f3403)
+
+cremos uno de nuevo y vemos como el contenido no se borra
+
+![image](https://github.com/user-attachments/assets/68604cb3-a8c0-44c5-8bee-929bef731228)
+
+
+
+
+
+
+
+
+
 
 
 

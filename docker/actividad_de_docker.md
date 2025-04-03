@@ -257,7 +257,25 @@ y como ves poniendo localhost y el puerto accedo a guestbook
 ![image](https://github.com/user-attachments/assets/df30e3f8-4357-4f4c-be2f-89c034fef894)
 
 
-ejemplo 3
+ejemplo 3 **Redes en Docker**
+
+crear un contenedor interactivo con la imagen debian
+
+docker run -it --name con1 --rm debian bash
+
+![image](https://github.com/user-attachments/assets/43e80fc7-4a29-4f4a-ac72-c595d339ea65)
+
+obtenemos la ip asignada
+
+docker inspect -f '{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}' con1
+
+![image](https://github.com/user-attachments/assets/c074422b-b8c5-4b37-8898-1e76043e32a6)
+
+luego conecto el contenedor a la red host
+
+![image](https://github.com/user-attachments/assets/6a9b2eb2-0ab3-4d72-9306-25e21619e270)
+
+
 
 
 

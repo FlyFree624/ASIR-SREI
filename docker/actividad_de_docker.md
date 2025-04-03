@@ -177,6 +177,13 @@ Para detener el contenedor myhello1 y mhello2
 docker stop myhello1
 docker stop myhello2
 
+![image](https://github.com/user-attachments/assets/caccd472-1884-46be-b8d8-674ccd880720)
+
+para borrar el contenedor myhello1
+
+docker rm myhello1
+
+![image](https://github.com/user-attachments/assets/e477f808-e5bb-4bae-98a3-7a4fc045ff83)
 
 
 

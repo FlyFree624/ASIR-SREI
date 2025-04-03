@@ -185,6 +185,19 @@ docker rm myhello1
 
 ![image](https://github.com/user-attachments/assets/e477f808-e5bb-4bae-98a3-7a4fc045ff83)
 
+volvemos a usar docker ps para mostar los contenedores en ejecucion
+
+![image](https://github.com/user-attachments/assets/513461ec-56a8-4ec8-8d9f-cfafc0443808)
+
+
+para eliminar todos los contenedores tanto los detenidos como los que no usamos
+
+docker rm -f $(docker ps -aq)
+
+no lo pongo en captura para que se vea que esta hecho porque si no puede tender a confusion que no lo he hecho (me ha pasado en varias ocasiones y prefiero no ejecutar lo de borrado para que no tienda a errores)
+
+
+
 
 
 

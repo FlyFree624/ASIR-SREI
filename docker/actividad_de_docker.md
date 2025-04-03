@@ -129,4 +129,14 @@ Subir la imagen a Docker Hub:
 
 docker push josepepe313/mi_app:1.0
 
+
 **-----------------------------ACTIVIDAD 3-----------------------------------------------------**
+
+para descargar la imagen ubuntu como menciona el enunciado poner en la terminal
+
+docker pull ubuntu y para las demas igual solo que sustitullendo el nombre de ubuntu
+
+docker pull hello-world
+docker pull nginx
+
+![](![image](https://github.com/user-attachments/assets/e40c9b38-2780-4a34-8008-3a2a1cbca5c1))

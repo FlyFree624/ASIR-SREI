@@ -276,13 +276,79 @@ luego conecto el contenedor a la red host
 ![image](https://github.com/user-attachments/assets/6a9b2eb2-0ab3-4d72-9306-25e21619e270)
 
 
+-----------------------------ACTIVIDAD 5-----------------------------------------------------
 
 
+emjemplo 1: **almacenamiento**
+
+esto es como si fuese una caja donde yo guardo mis cosas, si yo rompo la caja mis cosas desaparecen, para evitarlo usamos volumenes que es como si guardamos los datos en un sitio y al cambiar la caja los datos quedan intactos es decir que no se borraran ni nada
+
+se puede hacer de dos manera usando un volumen y bind mount
+
+**usando volumen**
+
+comenzamos con la actividad:
+
+creamos un archivo nuevo usamos nano
+
+nano docker-compose.yml
+
+y dentro pegamos lo siguiente
+
+![image](https://github.com/user-attachments/assets/341714da-1319-413e-935f-357ab64279b4)
 
 
+para iniciarlo lo iniciamos con esto de aqui
 
+docker compose up -d
 
+![image](https://github.com/user-attachments/assets/fbe9c331-0abd-43fc-a434-8b61f17d43ce)
 
+lo comprobamos 
+
+como se muestra en el ejemplo con 
+ docker volume ls
+
+ ![image](https://github.com/user-attachments/assets/0e8fad27-d875-4373-8734-8d94fb060e1c)
+
+ y aqui demuestro como se ha creado y se puede ver
+
+ como opcional porque no viene en el ejemplo explicado 
+
+ para acceder y ver los archivos que se pueden correr dentro de el usamos el comando siguiente
+
+ sudo docker exec -it [nombre] bash
+
+ 
+**usando bind mount**
+
+hacemos lo mismo de antes
+
+creamos el .yml
+
+sudo nano dockerr-compose.yml y escribimos dentro lo siguiente
+
+![image](https://github.com/user-attachments/assets/21e37c3c-20dd-4d3e-ba58-d988af81c6a3)
+
+pasos para la ejecucion
+
+creamos una carpeta para ello y ponemos un texto
+
+mkdir miweb
+
+echo "<h1>hola</h1>">miweb/index.html
+
+para ejecutar como antes
+
+docker compose up -d
+
+y en el navegador solo hay que poner en la barra de busqueda de navegacion localhost y el puerto 
+
+![image](https://github.com/user-attachments/assets/e45e259b-a570-479b-8b33-363e65d642fd)
+
+y aqui se puede ver como esta corriendo
+
+ejemplo 2:
 
 
 

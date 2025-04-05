@@ -350,6 +350,37 @@ y aqui se puede ver como esta corriendo
 
 ejemplo 2:
 
+**El comando docker compose**
+
+desplegar letschat
+
+arrancamos el contenedor
+
+docker compose up -d
+
+![image](https://github.com/user-attachments/assets/05c63bac-1498-4fd4-be2b-7d67b35a1614)
+
+
+y poner en la barra de busqueda localhost y el puerto
+
+
+ejemplo 3: **Despliegue de la aplicación Temperaturas**
+
+cremaos un .yml como en el ejemplo
+
+![image](https://github.com/user-attachments/assets/c91792fc-9fea-4916-95ac-903663085429)
+
+lo arrancamos como siempre docker compose up -d
+
+![image](https://github.com/user-attachments/assets/af796576-d374-4fe0-84cb-f0b6d429e902)
+
+ejemplo 4: **Despliegue de WordPress + Mariadb**
+
+
+
+
+
+
 
 
 

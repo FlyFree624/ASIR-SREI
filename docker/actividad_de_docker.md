@@ -443,10 +443,52 @@ ejemplo 2:
 
 version 1:
 
+ya estamos en ejemplo2
+
+![image](https://github.com/user-attachments/assets/7dc485e7-a2a8-4010-8dab-d8c73d26e05a)
+
+modificamos el index.php de la carpeta app por esto que añado en la imagen cualquuier cosa que añada en un .html o .php o lo que sea da igual lo muestro para desmostrar que lo he modificado
+
+![image](https://github.com/user-attachments/assets/15399478-0349-423e-b058-b797825eac5f)
+
+ejecutamos esto para construir la imagen
+
+![image](https://github.com/user-attachments/assets/b275b8fd-ee1b-4426-8d78-287f124a0d19)
+
+voy asin 
+![image](https://github.com/user-attachments/assets/c9ee64ba-7462-4c00-9540-39f7a3b06c4a)
+
+
+![image](https://github.com/user-attachments/assets/7d70b95a-3dd2-492b-9785-49b31a3f7660)
+
+luego poner localhost y el puerto en el navegador y se ve
+
+![image](https://github.com/user-attachments/assets/703a271e-dc73-4b1b-8542-df4963fdb6f4)
+
 version 2:
 
-version 3:
+modificamos el dockerfile como siempre
 
+![image](https://github.com/user-attachments/assets/66c1e39a-fa1c-4946-b815-4874c3288ca8)
+
+creamos y ejecutamos
+
+y vemos como funciona
+
+![image](https://github.com/user-attachments/assets/a6e08326-4f83-4331-be19-76daaf460cb3)
+
+
+
+
+
+
+
+
+
+
+
+
+version 2:
 
 
 

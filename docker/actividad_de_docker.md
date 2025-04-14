@@ -409,6 +409,41 @@ construimos la imagen
 
 ![image](https://github.com/user-attachments/assets/e9b150d5-ef3d-40f2-bc3a-85fa3a1ad209)
 
+ejecutamos esto para ejecutar
+
+![image](https://github.com/user-attachments/assets/09ea9193-7193-42e8-b77c-51fd6990ead6)
+
+y aqui demustro como funciona que se ve
+
+![image](https://github.com/user-attachments/assets/0e95ce0c-63fd-4767-8ec6-380eaa7aa576)
+
+nos situamos en version dos y en index.html agregamos esto
+
+![image](https://github.com/user-attachments/assets/ee4910d4-d6d0-44b7-9b5e-5dae63d354cf)
+
+hacemos un nano dockerfile y agregamos esto
+
+![image](https://github.com/user-attachments/assets/fb3f4849-9434-479b-a5d5-61b58c7fe476)
+
+ejecutamos para construir la imagen
+
+![image](https://github.com/user-attachments/assets/9f0e1f1d-b71c-43f2-94b8-82f3dccc9848)
+
+ejecutamos para que se vea en la web
+
+![image](https://github.com/user-attachments/assets/5fa375fa-e5f3-405a-807c-9ef30e4c1715)
+
+aqui muestro como se ve 
+
+![image](https://github.com/user-attachments/assets/2a011413-7f33-46a9-b956-6267cd36ed7b)
+
+
+
+
+
+
+
+
 
 
 

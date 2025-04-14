@@ -477,18 +477,69 @@ y vemos como funciona
 
 ![image](https://github.com/user-attachments/assets/a6e08326-4f83-4331-be19-76daaf460cb3)
 
+es lo mismo pero como ya habiamos creado antes las cosas por eso es tan corto 
 
 
+ejemplo 3:
 
+version 1:
 
+modificamos el Dockerfile como se especifica en el ejemplo
 
+![image](https://github.com/user-attachments/assets/744c28c9-1ae0-4bde-af4b-ea415ef30f83)
 
+por lo visto hay que esperar unos 30 minutos por el reloj de docker he estado leyendo y en dockerfile hay que cambiar esta linea que se muestra en la imagen
 
+![image](https://github.com/user-attachments/assets/6b4d2aa3-b987-424c-a718-7415223f0b45)
 
+se me creo al fin 
 
+![image](https://github.com/user-attachments/assets/b665164d-827a-4a63-915c-d7b8ee9dadc3)
 
+tuve que hacer un 
+
+sudo apt install ntpdate
+
+sudo ntpdate time.google.com
+
+para sincronizar la hora
+
+construimos la imagen
+
+![image](https://github.com/user-attachments/assets/97d88298-6c90-4309-93cd-51c14e22530f)
+
+creamos el contenedor
+
+![image](https://github.com/user-attachments/assets/d2b63ba2-b83a-4f0c-845c-a71a8b3abaf7)
+
+aqui demuestro como esta funcionando
+
+![image](https://github.com/user-attachments/assets/c38e2a2c-2ba5-4c17-94f9-d0abb55dcca3)
 
 version 2:
+
+en este caso no hace falta modificar el dockerfile
+
+solo montamos la imagen
+
+![image](https://github.com/user-attachments/assets/5c3a1769-6160-4b48-9df8-e877a9124e3a)
+
+ejecutamos el contenedor
+
+![image](https://github.com/user-attachments/assets/4ee09df6-ba58-46bd-9c6d-f8d098c75196)
+
+aqui demuestro como se esta ejecutando correctamente
+
+![image](https://github.com/user-attachments/assets/d2b940c5-617f-41fb-ba87-3d1d2457ecd1)
+
+
+
+
+
+
+
+
+
 
 
 

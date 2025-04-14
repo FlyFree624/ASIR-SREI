@@ -375,7 +375,7 @@ lo arrancamos como siempre docker compose up -d
 ![image](https://github.com/user-attachments/assets/af796576-d374-4fe0-84cb-f0b6d429e902)
 
 
------------------------------ACTIVIDAD 5-----------------------------------------------------
+-----------------------------ACTIVIDAD 6-----------------------------------------------------
 
 version:1
 descargamos los archivos del ejemplo

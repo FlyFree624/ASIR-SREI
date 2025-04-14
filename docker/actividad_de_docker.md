@@ -417,6 +417,8 @@ y aqui demustro como funciona que se ve
 
 ![image](https://github.com/user-attachments/assets/0e95ce0c-63fd-4767-8ec6-380eaa7aa576)
 
+version 3:
+
 nos situamos en version dos y en index.html agregamos esto
 
 ![image](https://github.com/user-attachments/assets/ee4910d4-d6d0-44b7-9b5e-5dae63d354cf)
@@ -437,7 +439,13 @@ aqui muestro como se ve
 
 ![image](https://github.com/user-attachments/assets/2a011413-7f33-46a9-b956-6267cd36ed7b)
 
+ejemplo 2:
 
+version 1:
+
+version 2:
+
+version 3:
 
 
 

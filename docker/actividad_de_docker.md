@@ -374,8 +374,51 @@ lo arrancamos como siempre docker compose up -d
 
 ![image](https://github.com/user-attachments/assets/af796576-d374-4fe0-84cb-f0b6d429e902)
 
-ejemplo 4: **Despliegue de WordPress + Mariadb**
 
+-----------------------------ACTIVIDAD 5-----------------------------------------------------
+
+version:1
+descargamos los archivos del ejemplo
+con git clone  https://github.com/josedom24/curso_docker_ies/tree/main/ejemplos/modulo5/ejemplo1/version1
+
+![image](https://github.com/user-attachments/assets/26e87dc9-ebf3-419c-a8d8-0f9d4ea27971)
+
+contruimos la imagen
+
+![image](https://github.com/user-attachments/assets/ac2a63a3-b0b7-4195-bbe7-226252172332)
+
+ejecutamos el nuevo contenedor
+
+![image](https://github.com/user-attachments/assets/272c79f1-76a6-43d2-8a9d-a935dc558289)ç
+
+
+y escuchando esta 
+
+![image](https://github.com/user-attachments/assets/35b1676d-ecec-4788-a956-9b92d14ef658)
+
+version 2:
+
+dentro del index.html lo modificamos y creamos una web para que haya diferencia
+
+
+y ponemos este fraggmento de codigo en el dockerfile
+
+![image](https://github.com/user-attachments/assets/a0e37ce2-2300-4b71-95b2-d1353793394c)
+
+construimos la imagen
+
+![image](https://github.com/user-attachments/assets/e9b150d5-ef3d-40f2-bc3a-85fa3a1ad209)
+
+
+
+
+
+
+
+
+
+
+ 
 
 
 

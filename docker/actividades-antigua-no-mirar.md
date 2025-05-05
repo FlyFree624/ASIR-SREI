@@ -75,50 +75,52 @@ Habilitamos y arrancamos el servicio de Docker
    
 **Lleva a cabo la práctica descrita en el segundo artículo**
 
-paso 4:
-  **crearse una cuenta en docker hub**
+**paso 4:**
 
-   parte 1:
+  crearse una cuenta en docker hub
+
+   **parte 1:**
 
    **Edita el fichero Dockerfile**
 
    crear un directorio para el y acceder a el
 
-   mkdir mi_app && cd mi_app
+     mkdir mi_app && cd mi_app
 
-   dentro de ese directorio crear un archivo sin extension con este contenido
+dentro de ese directorio crear un archivo sin extension con este contenido
 
-FROM node:lts-alpine
-WORKDIR /app
-COPY . .
-RUN npm install
-EXPOSE 3000
-CMD ["node", "src/index.js"]
+  FROM node:lts-alpine
+  WORKDIR /app
+  COPY . .
+  RUN npm install
+  EXPOSE 3000
+  CMD ["node", "src/index.js"]
 
 ![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/zzpo.png)
 
-parte 2:
-**Construye el contenedor**
+**parte 2:**
+
+[Construye el contenedor]
 
 hay que crear dos archivos un package.json y un src
 
 package.joson
 
-ejecutar npm init y seguir las preguntas que te hacen
+*ejecutar npm init y seguir las preguntas que te hacen*
 
 crear el directorio src
 
-mkdir src && touch src/index.js
+  mkdir src && touch src/index.js
 
 y dentro del src poner un codigo de prueba
 
 construimos la imagen
 
-docker build -t josepepe313/mi_app:1.0 .
+  docker build -t josepepe313/mi_app:1.0 .
 
 ![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/zyic.png)
 
-parte 3:
+**parte 3:**
 
 Ejecútalo
 
@@ -126,36 +128,36 @@ docker run -d -p 3000:3000 josepepe313/mi_app:1.0
 
 ![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/zzpssso.png)
 
-paso 5:
+**paso 5:**
 
 Publícalo
 
-docker login
+  docker login
 ![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/yyrrr.png)
 
 Etiquetar la imagen
 
-docker tag mi_app:1.0 josepepe313/mi_app:1.0
+  docker tag mi_app:1.0 josepepe313/mi_app:1.0
 
 Subir la imagen a Docker Hub:
 
-docker push josepepe313/mi_app:1.0
+  docker push josepepe313/mi_app:1.0
 
 
 **-----------------------------ACTIVIDAD 3-----------------------------------------------------**
 
 para descargar la imagen ubuntu como menciona el enunciado poner en la terminal
 
-docker pull ubuntu y para las demas igual solo que sustitullendo el nombre de ubuntu
+  docker pull ubuntu y para las demas igual solo que sustitullendo el nombre de ubuntu
 
-docker pull hello-world
-docker pull nginx
+  docker pull hello-world
+  docker pull nginx
 
 ![image](https://github.com/user-attachments/assets/e2001b31-6788-46bc-b0aa-3ca349bbe87f)
 
 para mostrar las imagenes descargadas usamos
 
-docker images
+  docker images
 
 ![image](https://github.com/user-attachments/assets/009bc6e7-8b93-4b51-bf8a-974a711a3c83)
 
@@ -163,12 +165,12 @@ para ejecutar un contenedor hello-world y dale nombre “myhello1”
 
 ponemos lo siguiente
 
-docker run --name myhello1 hello-world
+  docker run --name myhello1 hello-world
 
 y en los siguientes casos igual solo que cambiando **myhello1**
 
-docker run --name myhello2 hello-world
-docker run --name myhello3 hello-world
+  docker run --name myhello2 hello-world
+  docker run --name myhello3 hello-world
 
 ![image](https://github.com/user-attachments/assets/b652db69-59ab-455a-a3e8-12b74000b08b)
 
@@ -178,7 +180,7 @@ docker run --name myhello3 hello-world
 
 para mostrar los contenedores que se estan ejecutando usamos 
 
-docker ps -a
+  docker ps -a
 
 ![image](https://github.com/user-attachments/assets/a3736b71-073a-4565-9d48-e851628ff431)
 
@@ -186,14 +188,14 @@ he leido que suelen poner docker ps solo pero a mi me gusta usar docker ps -a pa
 
 Para detener el contenedor myhello1 y mhello2
 
-docker stop myhello1
-docker stop myhello2
+  docker stop myhello1
+  docker stop myhello2
 
 ![image](https://github.com/user-attachments/assets/caccd472-1884-46be-b8d8-674ccd880720)
 
 para borrar el contenedor myhello1
 
-docker rm myhello1
+  docker rm myhello1
 
 ![image](https://github.com/user-attachments/assets/e477f808-e5bb-4bae-98a3-7a4fc045ff83)
 
@@ -204,18 +206,18 @@ volvemos a usar docker ps para mostar los contenedores en ejecucion
 
 para eliminar todos los contenedores tanto los detenidos como los que no usamos
 
-docker rm -f $(docker ps -aq)
+  docker rm -f $(docker ps -aq)
 
 no lo pongo en captura para que se vea que esta hecho porque si no puede tender a confusion que no lo he hecho (me ha pasado en varias ocasiones y prefiero no ejecutar lo de borrado para que no tienda a errores)
 
 
 -----------------------------ACTIVIDAD 4----------------------------------------------------- 
 
-ejemplo 1: **Asociando almacenamiento a los contenedores: volúmenes Docker**
+**ejemplo 1: Asociando almacenamiento a los contenedores: volúmenes Docker**
 
 creamos un volumen
 
-docker volume create web
+  docker volume create web
 
 ![image](https://github.com/user-attachments/assets/15933a43-d1be-44c3-addc-bfaa4e460884)
 
@@ -223,13 +225,13 @@ para continuar hay que tener instalado apache
 
 creamos un contenedor con el volumen asociado, usando -v, y creamos un fichero index.html
 
-docker run -d --name my-apache-app -v web:/usr/local/apache2/htdocs -p 8080:80 httpd:2.4
+  docker run -d --name my-apache-app -v web:/usr/local/apache2/htdocs -p 8080:80 httpd:2.4
 
 ![image](https://github.com/user-attachments/assets/4b5dfbf9-692d-48c8-8fea-6023547239f9)
 
 le metemos informacion dentro
 
-docker exec my-apache-app bash -c 'echo "<h1>Hola</h1>" > /usr/local/apache2/htdocs/index.html'
+  docker exec my-apache-app bash -c 'echo "<h1>Hola</h1>" > /usr/local/apache2/htdocs/index.html'
 
 ![image](https://github.com/user-attachments/assets/3aa4a713-d88d-4e9a-86e8-ccd22f6011b6)
 
@@ -245,20 +247,21 @@ cremos uno de nuevo y vemos como el contenido no se borra
 ![image](https://github.com/user-attachments/assets/68604cb3-a8c0-44c5-8bee-929bef731228)
 
 
-ejemplo 2 **Despliegue de la aplicación Guestbook**
+**ejemplo 2 Despliegue de la aplicación Guestbook**
 
-docker network create guestbook
+  docker network create guestbook
+  
 ![image](https://github.com/user-attachments/assets/c1914da8-6b28-46c5-a866-c3de8f626862)
 
 recordar que hace falta el uso de redis
 
 para ejecutarlo
 
-docker run -d --name redis --network guestbook -v /opt/redis:/data redis redis-server --appendonly yes
+  docker run -d --name redis --network guestbook -v /opt/redis:/data redis redis-server --appendonly yes
 
 ![image](https://github.com/user-attachments/assets/7f167ecd-0a8b-4bcf-8cbe-e9026ff38039)
 
-docker run -d -p 80:5000 --name guestbook --network red_guestbook iesgn/guestbook
+  docker run -d -p 80:5000 --name guestbook --network red_guestbook iesgn/guestbook
 
 ![image](https://github.com/user-attachments/assets/f56629e1-dc12-40f7-a377-242c44c67f9d)
 
@@ -269,17 +272,17 @@ y como ves poniendo localhost y el puerto accedo a guestbook
 ![image](https://github.com/user-attachments/assets/df30e3f8-4357-4f4c-be2f-89c034fef894)
 
 
-ejemplo 3 **Redes en Docker**
+**ejemplo 3 Redes en Docker**
 
 crear un contenedor interactivo con la imagen debian
 
-docker run -it --name con1 --rm debian bash
+  docker run -it --name con1 --rm debian bash
 
 ![image](https://github.com/user-attachments/assets/43e80fc7-4a29-4f4a-ac72-c595d339ea65)
 
 obtenemos la ip asignada
 
-docker inspect -f '{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}' con1
+  docker inspect -f '{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}' con1
 
 ![image](https://github.com/user-attachments/assets/c074422b-b8c5-4b37-8898-1e76043e32a6)
 
@@ -291,7 +294,7 @@ luego conecto el contenedor a la red host
 -----------------------------ACTIVIDAD 5-----------------------------------------------------
 
 
-emjemplo 1: **almacenamiento**
+**emjemplo 1: almacenamiento**
 
 esto es como si fuese una caja donde yo guardo mis cosas, si yo rompo la caja mis cosas desaparecen, para evitarlo usamos volumenes que es como si guardamos los datos en un sitio y al cambiar la caja los datos quedan intactos es decir que no se borraran ni nada
 
@@ -303,7 +306,7 @@ comenzamos con la actividad:
 
 creamos un archivo nuevo usamos nano
 
-nano docker-compose.yml
+  nano docker-compose.yml
 
 y dentro pegamos lo siguiente
 
@@ -312,14 +315,15 @@ y dentro pegamos lo siguiente
 
 para iniciarlo lo iniciamos con esto de aqui
 
-docker compose up -d
+  docker compose up -d
 
 ![image](https://github.com/user-attachments/assets/fbe9c331-0abd-43fc-a434-8b61f17d43ce)
 
 lo comprobamos 
 
 como se muestra en el ejemplo con 
- docker volume ls
+
+   docker volume ls
 
  ![image](https://github.com/user-attachments/assets/0e8fad27-d875-4373-8734-8d94fb060e1c)
 
@@ -329,7 +333,7 @@ como se muestra en el ejemplo con
 
  para acceder y ver los archivos que se pueden correr dentro de el usamos el comando siguiente
 
- sudo docker exec -it [nombre] bash
+   sudo docker exec -it [nombre] bash
 
  
 **usando bind mount**
@@ -338,7 +342,7 @@ hacemos lo mismo de antes
 
 creamos el .yml
 
-sudo nano dockerr-compose.yml y escribimos dentro lo siguiente
+  sudo nano dockerr-compose.yml y escribimos dentro lo siguiente
 
 ![image](https://github.com/user-attachments/assets/21e37c3c-20dd-4d3e-ba58-d988af81c6a3)
 
@@ -346,13 +350,13 @@ pasos para la ejecucion
 
 creamos una carpeta para ello y ponemos un texto
 
-mkdir miweb
+  mkdir miweb
 
-echo "<h1>hola</h1>">miweb/index.html
+  echo "<h1>hola</h1>">miweb/index.html
 
 para ejecutar como antes
 
-docker compose up -d
+  docker compose up -d
 
 y en el navegador solo hay que poner en la barra de busqueda de navegacion localhost y el puerto 
 
@@ -360,7 +364,7 @@ y en el navegador solo hay que poner en la barra de busqueda de navegacion local
 
 y aqui se puede ver como esta corriendo
 
-ejemplo 2:
+**ejemplo 2:**
 
 **El comando docker compose**
 
@@ -368,7 +372,7 @@ desplegar letschat
 
 arrancamos el contenedor
 
-docker compose up -d
+  docker compose up -d
 
 ![image](https://github.com/user-attachments/assets/05c63bac-1498-4fd4-be2b-7d67b35a1614)
 
@@ -376,20 +380,24 @@ docker compose up -d
 y poner en la barra de busqueda localhost y el puerto
 
 
-ejemplo 3: **Despliegue de la aplicación Temperaturas**
+**ejemplo 3: Despliegue de la aplicación Temperaturas**
 
 cremaos un .yml como en el ejemplo
 
 ![image](https://github.com/user-attachments/assets/c91792fc-9fea-4916-95ac-903663085429)
 
-lo arrancamos como siempre docker compose up -d
+lo arrancamos como siempre
+
+  docker compose up -d
 
 ![image](https://github.com/user-attachments/assets/af796576-d374-4fe0-84cb-f0b6d429e902)
 
 
 -----------------------------ACTIVIDAD 6-----------------------------------------------------
 
-version:1
+**ejemplo1:**
+
+*version:1*
 descargamos los archivos del ejemplo
 con git clone  https://github.com/josedom24/curso_docker_ies/tree/main/ejemplos/modulo5/ejemplo1/version1
 
@@ -408,7 +416,7 @@ y escuchando esta
 
 ![image](https://github.com/user-attachments/assets/35b1676d-ecec-4788-a956-9b92d14ef658)
 
-version 2:
+*version 2:*
 
 dentro del index.html lo modificamos y creamos una web para que haya diferencia
 
@@ -429,7 +437,8 @@ y aqui demustro como funciona que se ve
 
 ![image](https://github.com/user-attachments/assets/0e95ce0c-63fd-4767-8ec6-380eaa7aa576)
 
-version 3:
+
+*version 3:*
 
 nos situamos en version dos y en index.html agregamos esto
 
@@ -451,9 +460,11 @@ aqui muestro como se ve
 
 ![image](https://github.com/user-attachments/assets/2a011413-7f33-46a9-b956-6267cd36ed7b)
 
-ejemplo 2:
 
-version 1:
+
+**ejemplo 2:**
+
+*version 1:*
 
 ya estamos en ejemplo2
 
@@ -477,7 +488,7 @@ luego poner localhost y el puerto en el navegador y se ve
 
 ![image](https://github.com/user-attachments/assets/703a271e-dc73-4b1b-8542-df4963fdb6f4)
 
-version 2:
+*version 2:*
 
 modificamos el dockerfile como siempre
 
@@ -492,9 +503,9 @@ y vemos como funciona
 es lo mismo pero como ya habiamos creado antes las cosas por eso es tan corto 
 
 
-ejemplo 3:
+**ejemplo 3:**
 
-version 1:
+*version 1:*
 
 modificamos el Dockerfile como se especifica en el ejemplo
 
@@ -510,9 +521,9 @@ se me creo al fin
 
 tuve que hacer un 
 
-sudo apt install ntpdate
+  sudo apt install ntpdate
 
-sudo ntpdate time.google.com
+  sudo ntpdate time.google.com
 
 para sincronizar la hora
 
@@ -528,7 +539,7 @@ aqui demuestro como esta funcionando
 
 ![image](https://github.com/user-attachments/assets/c38e2a2c-2ba5-4c17-94f9-d0abb55dcca3)
 
-version 2:
+*version 2:*
 
 en este caso no hace falta modificar el dockerfile
 
@@ -547,7 +558,7 @@ aqui demuestro como se esta ejecutando correctamente
 
 para subir la imagen a dockerhub como me piden 
 
-hago un docker push y nombre de la imagen y listo pero hay que iniciar sesion ante
+  hago un docker push y nombre de la imagen y listo pero hay que iniciar sesion ante
 
 ![image](https://github.com/user-attachments/assets/6dfaa847-3676-4600-9b44-05667739a432)
 

@@ -4,7 +4,7 @@
   
 1) primero hacemos un update
 
-    $ sudo apt update
+    $sudo apt update
   
 ![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/widd.png)
 

@@ -113,18 +113,24 @@ Subir la imagen a Docker Hub:
     $ docker pull ubuntu y para las demas igual solo que sustitullendo el nombre de ubuntu
     
 ▶️ **2) para descargar la imagen de hello-world**
+
     $ docker pull hello-world
     
 ▶️ **3) para descargar la imagen nginx**
+
     $ docker pull nginx
+    
 ![image](https://github.com/user-attachments/assets/e2001b31-6788-46bc-b0aa-3ca349bbe87f)
 
 ▶️ **4) para mostrar las imagenes descargadas usamos**
+
     $ docker images
+    
 ![image](https://github.com/user-attachments/assets/009bc6e7-8b93-4b51-bf8a-974a711a3c83)
 
 ▶️ **5) para ejecutar un contenedor hello-world y dale nombre “myhello1”**
 ponemos lo siguiente
+
     $ docker run --name myhello1 hello-world
     
 ▶️ **6) para ejecutar un contenedor hello-world y dale nombre “myhello2”**

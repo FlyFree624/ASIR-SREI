@@ -2,36 +2,36 @@
 
   **intalar docker**
   
-  primero hacemos un update
+1)  primero hacemos un update
 
     sudo apt update
   
 ![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/widd.png)
 
-instalamos los paquetes
+2) instalamos los paquetes
 
     sudo apt install apt-transport-https ca-certificates curl software-properties-common -y
 
 ![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/zzqwe.png)
 
-importamos la clave GPG de Docker:
+3) importamos la clave GPG de Docker:
 
     curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
 
   ![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/zgpg.png)
 
-añadir repositorio estable
+4) añadir repositorio estable
 
     echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/debian $(lsb_release -cs) stable" | sudo tee        /etc/apt/sources.list.d/docker.list > /dev/null
 
 
-instalamos docker
+5) instalamos docker
 
     sudo apt install docker-ce docker-ce-cli containerd.io -y
 
   ![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/zindoc.png)
 
-Habilitamos y arrancamos el servicio de Docker
+6) Habilitamos y arrancamos el servicio de Docker
 
     sudo systemctl enable docker
     sudo systemctl start docker

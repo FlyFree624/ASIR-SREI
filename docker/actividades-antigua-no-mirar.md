@@ -9,7 +9,7 @@
   
 ![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/widd.png)
 
-:fire: 2) instalamos los paquetes
+:tick: 2) instalamos los paquetes
    ```
 
     $ sudo apt install apt-transport-https ca-certificates curl software-properties-common -y

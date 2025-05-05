@@ -1,7 +1,7 @@
 # **-----------------------------ACTIVIDAD 1---------------------------------**
 
 
-                              # INSTALAR DOCKER
+                              #INSTALAR DOCKER
   
 ▶️ 1) primero hacemos un update
    ```

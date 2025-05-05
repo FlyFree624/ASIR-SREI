@@ -562,3 +562,6 @@ para subir la imagen a dockerhub como me piden
 
 ![image](https://github.com/user-attachments/assets/6dfaa847-3676-4600-9b44-05667739a432)
 
+esta es la url para descargar las imagenes
+
+  https://hub.docker.com/u/josepepe313

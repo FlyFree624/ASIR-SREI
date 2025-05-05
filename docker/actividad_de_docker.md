@@ -533,6 +533,14 @@ aqui demuestro como se esta ejecutando correctamente
 ![image](https://github.com/user-attachments/assets/d2b940c5-617f-41fb-ba87-3d1d2457ecd1)
 
 
+para subir la imagen a dockerhub como me piden 
+
+hago un docker push y nombre de la imagen y listo pero hay que iniciar sesion ante
+
+![image](https://github.com/user-attachments/assets/6dfaa847-3676-4600-9b44-05667739a432)
+
+
+
 
 
 

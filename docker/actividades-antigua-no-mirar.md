@@ -1,7 +1,7 @@
 # **-----------------------------ACTIVIDAD 1---------------------------------**
 
 
-  # instalar docker
+                              # INSTALAR DOCKER
   
 ▶️ 1) primero hacemos un update
    ```

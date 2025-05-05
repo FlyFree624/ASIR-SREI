@@ -2,14 +2,14 @@
 
   # instalar docker
   
-1) primero hacemos un update
+▶️: 1) primero hacemos un update
    ```
    sudo apt update
    ```
   
 ![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/widd.png)
 
-:tick: 2) instalamos los paquetes
+▶️: 2) instalamos los paquetes
    ```
 
     $ sudo apt install apt-transport-https ca-certificates curl software-properties-common -y

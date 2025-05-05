@@ -39,9 +39,9 @@
 
   ![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/zindoc.png)
 
-▶️ 6) Habilitamos y arrancamos el servicio de Docker
    ```
-
+▶️ 6) Habilitamos y arrancamos el servicio de Docker
+ ```
     $ sudo systemctl enable docker
     $ sudo systemctl start docker
    ```

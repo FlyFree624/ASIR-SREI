@@ -31,7 +31,7 @@
     $ echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/debian $(lsb_release -cs) stable" | sudo tee        $ /etc/apt/sources.list.d/docker.list > /dev/null
 ```
 
-6) instalamos docker
+5) instalamos docker
 ```
 
     $ sudo apt install docker-ce docker-ce-cli containerd.io -y
@@ -53,9 +53,9 @@
 **-----------------------------ACTIVIDAD 2-----------------------------------------------------**
 
 
- **Lleva a cabo la práctica descrita en el primer artículo**
+ # 1- Lleva a cabo la práctica descrita en el primer artículo
 
-   **parte 1:**
+   **1.1) parte 1:**
    
    Ejecuta la imagen "hello-world"
    ```
@@ -65,7 +65,7 @@
    
    ![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/zdoc.png)
    
-   **parte 2:**
+   **1.2) parte 2:**
    
    Muestra las imágenes Docker instaladas
    ```
@@ -75,7 +75,7 @@
    
    ![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/yim.png)
    
-   **parte 3:**
+   **1.3) parte 3:**
    
    Muestra los contenedores Docker
 
@@ -87,15 +87,12 @@
 
    
    
-**Lleva a cabo la práctica descrita en el segundo artículo**
+**2) Lleva a cabo la práctica descrita en el segundo artículo**
 
-**paso 4:**
 
-  crearse una cuenta en docker hub
 
-   **parte 1:**
 
-   **Edita el fichero Dockerfile**
+**2.1) Edita el fichero Dockerfile**
 
    crear un directorio para el y acceder a el
 
@@ -112,9 +109,7 @@ dentro de ese directorio crear un archivo sin extension con este contenido
 
 ![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/zzpo.png)
 
-**parte 2:**
-
-[Construye el contenedor]
+**2.2) Construye el contenedor**
 
 hay que crear dos archivos un package.json y un src
 
@@ -134,17 +129,18 @@ construimos la imagen
 
 ![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/zyic.png)
 
-**parte 3:**
 
-Ejecútalo
+**2.3) Ejecútalo**
 
     $ docker run -d -p 3000:3000 josepepe313/mi_app:1.0
 
 ![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/zzpssso.png)
 
-**paso 5:**
 
-Publícalo
+**2.4) crearse una cuenta en docker hub**
+
+
+**2.5) Publícalo**
 
     $ docker login
 ![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/yyrrr.png)

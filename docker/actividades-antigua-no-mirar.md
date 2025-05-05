@@ -55,7 +55,7 @@
 
  # 1- Lleva a cabo la práctica descrita en el primer artículo
 
-   ☑️**1.1) parte 1:**
+   ☑️ **1.1) parte 1:**
    
    Ejecuta la imagen "hello-world"
    ```
@@ -65,7 +65,7 @@
    
    ![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/zdoc.png)
    
-   ☑️**1.2) parte 2:**
+   ☑️ **1.2) parte 2:**
    
    Muestra las imágenes Docker instaladas
    ```
@@ -75,7 +75,7 @@
    
    ![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/yim.png)
    
-   ☑️**1.3) parte 3:**
+   ☑️ **1.3) parte 3:**
    
    Muestra los contenedores Docker
 
@@ -89,7 +89,7 @@
    
 # 2 Lleva a cabo la práctica descrita en el segundo artículo
 
-✔️**2.1) Edita el fichero Dockerfile**
+✔️ **2.1) Edita el fichero Dockerfile**
 
    crear un directorio para el y acceder a el
 
@@ -106,7 +106,7 @@ dentro de ese directorio crear un archivo sin extension con este contenido
 
 ![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/zzpo.png)
 
-✔️**2.2) Construye el contenedor**
+✔️ **2.2) Construye el contenedor**
 
 hay que crear dos archivos un package.json y un src
 
@@ -127,17 +127,17 @@ construimos la imagen
 ![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/zyic.png)
 
 
-✔️**2.3) Ejecútalo**
+✔️ **2.3) Ejecútalo**
 
     $ docker run -d -p 3000:3000 josepepe313/mi_app:1.0
 
 ![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/zzpssso.png)
 
 
-**2.4) crearse una cuenta en docker hub**
+✔️ **2.4) crearse una cuenta en docker hub**
 
 
-**2.5) Publícalo**
+✔️ **2.5) Publícalo**
 
     $ docker login
 ![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/yyrrr.png)
@@ -153,33 +153,33 @@ Subir la imagen a Docker Hub:
 
 **-----------------------------ACTIVIDAD 3-----------------------------------------------------**
 
-**1) para descargar la imagen ubuntu como menciona el enunciado poner en la terminal**
+▶️ **1) para descargar la imagen ubuntu como menciona el enunciado poner en la terminal**
 
     $ docker pull ubuntu y para las demas igual solo que sustitullendo el nombre de ubuntu
-**2) para descargar la imagen de hello-world**
+▶️ **2) para descargar la imagen de hello-world**
 
     $ docker pull hello-world
-**3) para descargar la imagen nginx**
+▶️ **3) para descargar la imagen nginx**
     $ docker pull nginx
 
 ![image](https://github.com/user-attachments/assets/e2001b31-6788-46bc-b0aa-3ca349bbe87f)
 
-**4) para mostrar las imagenes descargadas usamos**
+▶️ **4) para mostrar las imagenes descargadas usamos**
 
     $ docker images
 
 ![image](https://github.com/user-attachments/assets/009bc6e7-8b93-4b51-bf8a-974a711a3c83)
 
-**5) para ejecutar un contenedor hello-world y dale nombre “myhello1”**
+▶️ **5) para ejecutar un contenedor hello-world y dale nombre “myhello1”**
 
 ponemos lo siguiente
 
     $ docker run --name myhello1 hello-world
-**6) para ejecutar un contenedor hello-world y dale nombre “myhello2”**
+▶️ **6) para ejecutar un contenedor hello-world y dale nombre “myhello2”**
 
     $ docker run --name myhello2 hello-world
     
-**7) para ejecutar un contenedor hello-world y dale nombre “myhello3”**
+▶️ **7) para ejecutar un contenedor hello-world y dale nombre “myhello3”**
 
     $ docker run --name myhello3 hello-world
 
@@ -189,7 +189,7 @@ ponemos lo siguiente
 
 ![image](https://github.com/user-attachments/assets/c91cd17e-90ab-4796-93fe-f63287d438d7)
 
-**8) para mostrar los contenedores que se estan ejecutando usamos**
+▶️ **8) para mostrar los contenedores que se estan ejecutando usamos**
 
     $ docker ps -a
 
@@ -197,28 +197,28 @@ ponemos lo siguiente
 
 he leido que suelen poner docker ps solo pero a mi me gusta usar docker ps -a para que me mustre todo al completo
 
-**9) Para detener el contenedor myhello1**
+▶️ **9) Para detener el contenedor myhello1**
 
     $ docker stop myhello1
 
-**10) Para detener el contenedor myhello2**
+▶️ **10) Para detener el contenedor myhello2**
 
     $ docker stop myhello2
 
 ![image](https://github.com/user-attachments/assets/caccd472-1884-46be-b8d8-674ccd880720)
 
-**11) para borrar el contenedor myhello1**
+▶️ **11) para borrar el contenedor myhello1**
 
     $ docker rm myhello1
 
 ![image](https://github.com/user-attachments/assets/e477f808-e5bb-4bae-98a3-7a4fc045ff83)
 
-**12) volvemos a usar docker ps para mostar los contenedores en ejecucion**
+▶️ **12) volvemos a usar docker ps para mostar los contenedores en ejecucion**
 
 ![image](https://github.com/user-attachments/assets/513461ec-56a8-4ec8-8d9f-cfafc0443808)
 
 
-**13) para eliminar todos los contenedores tanto los detenidos como los que no usamos**
+▶️ **13) para eliminar todos los contenedores tanto los detenidos como los que no usamos**
 
     $ docker rm -f $(docker ps -aq)
 
@@ -229,7 +229,7 @@ no lo pongo en captura para que se vea que esta hecho porque si no puede tender 
 
 # TRES EJEMPLOS DEL MODULO 3 DOCUMENTADOS Y CAPTURA DE PANTALLA
 
-**ejemplo 1: Asociando almacenamiento a los contenedores: volúmenes Docker**
+🥇 **ejemplo 1: Asociando almacenamiento a los contenedores: volúmenes Docker**
 
 creamos un volumen
 
@@ -264,7 +264,7 @@ cremos uno de nuevo y vemos como el contenido no se borra
 ![image](https://github.com/user-attachments/assets/68604cb3-a8c0-44c5-8bee-929bef731228)
 
 
-**ejemplo 2 Despliegue de la aplicación Guestbook**
+🥈 **ejemplo 2 Despliegue de la aplicación Guestbook**
 
     $ docker network create guestbook
   
@@ -289,7 +289,7 @@ y como ves poniendo localhost y el puerto accedo a guestbook
 ![image](https://github.com/user-attachments/assets/df30e3f8-4357-4f4c-be2f-89c034fef894)
 
 
-**ejemplo 3 Redes en Docker**
+🥉 **ejemplo 3 Redes en Docker**
 
 crear un contenedor interactivo con la imagen debian
 
@@ -313,7 +313,7 @@ luego conecto el contenedor a la red host
 # TRES EJEMPLOS DEL MODULO 4 DOCUMENTADOS Y CAPTURA DE PANTALLA
 
 
-**emjemplo 1: almacenamiento**
+🥇 **emjemplo 1: almacenamiento**
 
 esto es como si fuese una caja donde yo guardo mis cosas, si yo rompo la caja mis cosas desaparecen, para evitarlo usamos volumenes que es como si guardamos los datos en un sitio y al cambiar la caja los datos quedan intactos es decir que no se borraran ni nada
 
@@ -383,7 +383,7 @@ y en el navegador solo hay que poner en la barra de busqueda de navegacion local
 
 y aqui se puede ver como esta corriendo
 
-**ejemplo 2:**
+🥈 **ejemplo 2:**
 
 **El comando docker compose**
 
@@ -399,7 +399,7 @@ arrancamos el contenedor
 y poner en la barra de busqueda localhost y el puerto
 
 
-**ejemplo 3: Despliegue de la aplicación Temperaturas**
+🥉 **ejemplo 3: Despliegue de la aplicación Temperaturas**
 
 cremaos un .yml como en el ejemplo
 
@@ -416,7 +416,7 @@ lo arrancamos como siempre
 
 # TRES EJEMPLOS DEL MODULO 5 DOCUMENTADOS Y CAPTURA DE PANTALLA
 
-**ejemplo1:**
+🥇 **ejemplo1:**
 
 *version:1*
 descargamos los archivos del ejemplo
@@ -481,9 +481,7 @@ aqui muestro como se ve
 
 ![image](https://github.com/user-attachments/assets/2a011413-7f33-46a9-b956-6267cd36ed7b)
 
-
-
-**ejemplo 2:**
+🥈 **ejemplo 2:**
 
 *version 1:*
 
@@ -524,7 +522,7 @@ y vemos como funciona
 es lo mismo pero como ya habiamos creado antes las cosas por eso es tan corto 
 
 
-**ejemplo 3:**
+🥉 **ejemplo 3:**
 
 *version 1:*
 

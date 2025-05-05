@@ -11,7 +11,7 @@
 
 instalamos los paquetes
 
-  sudo apt install apt-transport-https ca-certificates curl software-properties-common -y
+    sudo apt install apt-transport-https ca-certificates curl software-properties-common -y
 
 ![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/zzqwe.png)
 

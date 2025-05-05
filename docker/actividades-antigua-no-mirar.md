@@ -162,25 +162,28 @@ Subir la imagen a Docker Hub:
 **2) para descargar la imagen de hello-world**
 
     $ docker pull hello-world
+**3) para descargar la imagen nginx**
     $ docker pull nginx
 
 ![image](https://github.com/user-attachments/assets/e2001b31-6788-46bc-b0aa-3ca349bbe87f)
 
-para mostrar las imagenes descargadas usamos
+**4) para mostrar las imagenes descargadas usamos**
 
     $ docker images
 
 ![image](https://github.com/user-attachments/assets/009bc6e7-8b93-4b51-bf8a-974a711a3c83)
 
-para ejecutar un contenedor hello-world y dale nombre “myhello1”
+**5) para ejecutar un contenedor hello-world y dale nombre “myhello1”**
 
 ponemos lo siguiente
 
     $ docker run --name myhello1 hello-world
-
-y en los siguientes casos igual solo que cambiando **myhello1**
+**6) para ejecutar un contenedor hello-world y dale nombre “myhello2”**
 
     $ docker run --name myhello2 hello-world
+    
+**7) para ejecutar un contenedor hello-world y dale nombre “myhello3”**
+
     $ docker run --name myhello3 hello-world
 
 ![image](https://github.com/user-attachments/assets/b652db69-59ab-455a-a3e8-12b74000b08b)
@@ -189,7 +192,7 @@ y en los siguientes casos igual solo que cambiando **myhello1**
 
 ![image](https://github.com/user-attachments/assets/c91cd17e-90ab-4796-93fe-f63287d438d7)
 
-para mostrar los contenedores que se estan ejecutando usamos 
+**8) para mostrar los contenedores que se estan ejecutando usamos**
 
     $ docker ps -a
 
@@ -197,25 +200,28 @@ para mostrar los contenedores que se estan ejecutando usamos
 
 he leido que suelen poner docker ps solo pero a mi me gusta usar docker ps -a para que me mustre todo al completo
 
-Para detener el contenedor myhello1 y mhello2
+**9) Para detener el contenedor myhello1**
 
     $ docker stop myhello1
+
+**10) Para detener el contenedor myhello2**
+
     $ docker stop myhello2
 
 ![image](https://github.com/user-attachments/assets/caccd472-1884-46be-b8d8-674ccd880720)
 
-para borrar el contenedor myhello1
+**11) para borrar el contenedor myhello1**
 
     $ docker rm myhello1
 
 ![image](https://github.com/user-attachments/assets/e477f808-e5bb-4bae-98a3-7a4fc045ff83)
 
-volvemos a usar docker ps para mostar los contenedores en ejecucion
+**12) volvemos a usar docker ps para mostar los contenedores en ejecucion**
 
 ![image](https://github.com/user-attachments/assets/513461ec-56a8-4ec8-8d9f-cfafc0443808)
 
 
-para eliminar todos los contenedores tanto los detenidos como los que no usamos
+**13) para eliminar todos los contenedores tanto los detenidos como los que no usamos**
 
     $ docker rm -f $(docker ps -aq)
 
@@ -223,6 +229,8 @@ no lo pongo en captura para que se vea que esta hecho porque si no puede tender 
 
 
 -----------------------------ACTIVIDAD 4----------------------------------------------------- 
+
+# TRES EJEMPLOS DEL MODULO 3 DOCUMENTADOS Y CAPTURA DE PANTALLA
 
 **ejemplo 1: Asociando almacenamiento a los contenedores: volúmenes Docker**
 
@@ -304,6 +312,8 @@ luego conecto el contenedor a la red host
 
 
 **-----------------------------ACTIVIDAD 5-----------------------------------------------------**
+
+# TRES EJEMPLOS DEL MODULO 4 DOCUMENTADOS Y CAPTURA DE PANTALLA
 
 
 **emjemplo 1: almacenamiento**
@@ -406,6 +416,8 @@ lo arrancamos como siempre
 
 
 -----------------------------ACTIVIDAD 6-----------------------------------------------------
+
+# TRES EJEMPLOS DEL MODULO 5 DOCUMENTADOS Y CAPTURA DE PANTALLA
 
 **ejemplo1:**
 

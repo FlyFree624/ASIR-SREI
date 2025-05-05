@@ -134,35 +134,47 @@ ponemos lo siguiente
     $ docker run --name myhello1 hello-world
     
 ▶️ **6) para ejecutar un contenedor hello-world y dale nombre “myhello2”**
+
     $ docker run --name myhello2 hello-world
     
 ▶️ **7) para ejecutar un contenedor hello-world y dale nombre “myhello3”**
+
     $ docker run --name myhello3 hello-world
+    
 ![image](https://github.com/user-attachments/assets/b652db69-59ab-455a-a3e8-12b74000b08b)
 ![image](https://github.com/user-attachments/assets/86a2c58c-f7fc-4057-8126-850b7351e380)
 ![image](https://github.com/user-attachments/assets/c91cd17e-90ab-4796-93fe-f63287d438d7)
 
 ▶️ **8) para mostrar los contenedores que se estan ejecutando usamos**
+
     $ docker ps -a
+    
 ![image](https://github.com/user-attachments/assets/a3736b71-073a-4565-9d48-e851628ff431)
 he leido que suelen poner docker ps solo pero a mi me gusta usar docker ps -a para que me mustre todo al completo
 
 ▶️ **9) Para detener el contenedor myhello1**
+
     $ docker stop myhello1
 
 ▶️ **10) Para detener el contenedor myhello2**
+
     $ docker stop myhello2
+    
 ![image](https://github.com/user-attachments/assets/caccd472-1884-46be-b8d8-674ccd880720)
 
 ▶️ **11) para borrar el contenedor myhello1**
+
     $ docker rm myhello1
+    
 ![image](https://github.com/user-attachments/assets/e477f808-e5bb-4bae-98a3-7a4fc045ff83)
 
 ▶️ **12) volvemos a usar docker ps para mostar los contenedores en ejecucion**
 ![image](https://github.com/user-attachments/assets/513461ec-56a8-4ec8-8d9f-cfafc0443808)
 
 ▶️ **13) para eliminar todos los contenedores tanto los detenidos como los que no usamos**
+
     $ docker rm -f $(docker ps -aq)
+    
 no lo pongo en captura para que se vea que esta hecho porque si no puede tender a confusion que no lo he hecho (me ha pasado en varias ocasiones y prefiero no ejecutar lo de borrado para que no tienda a errores)
 
 
@@ -172,14 +184,20 @@ no lo pongo en captura para que se vea que esta hecho porque si no puede tender 
 
 🥇 **ejemplo 1: Asociando almacenamiento a los contenedores: volúmenes Docker**
 creamos un volumen
+
     $ docker volume create web
+    
 ![image](https://github.com/user-attachments/assets/15933a43-d1be-44c3-addc-bfaa4e460884)
 para continuar hay que tener instalado apache
 creamos un contenedor con el volumen asociado, usando -v, y creamos un fichero index.html
+
     $ docker run -d --name my-apache-app -v web:/usr/local/apache2/htdocs -p 8080:80 httpd:2.4
+    
 ![image](https://github.com/user-attachments/assets/4b5dfbf9-692d-48c8-8fea-6023547239f9)
 le metemos informacion dentro
+
     $ docker exec my-apache-app bash -c 'echo "<h1>Hola</h1>" > /usr/local/apache2/htdocs/index.html'
+    
 ![image](https://github.com/user-attachments/assets/3aa4a713-d88d-4e9a-86e8-ccd22f6011b6)
 le hacemos un curl
 ![image](https://github.com/user-attachments/assets/d7978e51-8443-458b-93da-d8ea870d82d6)
@@ -189,13 +207,19 @@ cremos uno de nuevo y vemos como el contenido no se borra
 ![image](https://github.com/user-attachments/assets/68604cb3-a8c0-44c5-8bee-929bef731228)
 
 🥈 **ejemplo 2 Despliegue de la aplicación Guestbook**
+
     $ docker network create guestbook
+    
 ![image](https://github.com/user-attachments/assets/c1914da8-6b28-46c5-a866-c3de8f626862)
 recordar que hace falta el uso de redis
 para ejecutarlo
+
     $ docker run -d --name redis --network guestbook -v /opt/redis:/data redis redis-server --appendonly yes
+    
 ![image](https://github.com/user-attachments/assets/7f167ecd-0a8b-4bcf-8cbe-e9026ff38039)
+
     $ docker run -d -p 80:5000 --name guestbook --network red_guestbook iesgn/guestbook
+    
 ![image](https://github.com/user-attachments/assets/f56629e1-dc12-40f7-a377-242c44c67f9d)
 he usado otro nombre y puerto porque me daba error porque ya existia
 y como ves poniendo localhost y el puerto accedo a guestbook
@@ -203,10 +227,14 @@ y como ves poniendo localhost y el puerto accedo a guestbook
 
 🥉 **ejemplo 3 Redes en Docker**
 crear un contenedor interactivo con la imagen debian
+
     $ docker run -it --name con1 --rm debian bash
+    
 ![image](https://github.com/user-attachments/assets/43e80fc7-4a29-4f4a-ac72-c595d339ea65)
 obtenemos la ip asignada
+
     $ docker inspect -f '{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}' con1
+    
 ![image](https://github.com/user-attachments/assets/c074422b-b8c5-4b37-8898-1e76043e32a6)
 luego conecto el contenedor a la red host
 ![image](https://github.com/user-attachments/assets/6a9b2eb2-0ab3-4d72-9306-25e21619e270)
@@ -222,20 +250,28 @@ se puede hacer de dos manera usando un volumen y bind mount
 **usando volumen**
 comenzamos con la actividad:
 creamos un archivo nuevo usamos nano
+
     $ nano docker-compose.yml
+    
 y dentro pegamos lo siguiente
 ![image](https://github.com/user-attachments/assets/341714da-1319-413e-935f-357ab64279b4)
 para iniciarlo lo iniciamos con esto de aqui
+
     $ docker compose up -d
+    
 ![image](https://github.com/user-attachments/assets/fbe9c331-0abd-43fc-a434-8b61f17d43ce)
 lo comprobamos 
 como se muestra en el ejemplo con 
+
      $ docker volume ls
+     
  ![image](https://github.com/user-attachments/assets/0e8fad27-d875-4373-8734-8d94fb060e1c)
  y aqui demuestro como se ha creado y se puede ver
  como opcional porque no viene en el ejemplo explicado 
  para acceder y ver los archivos que se pueden correr dentro de el usamos el comando siguiente
+ 
      $ sudo docker exec -it [nombre] bash
+     
 **usando bind mount**
 hacemos lo mismo de antes
 creamos el .yml
@@ -243,10 +279,15 @@ creamos el .yml
 ![image](https://github.com/user-attachments/assets/21e37c3c-20dd-4d3e-ba58-d988af81c6a3)
 pasos para la ejecucion
 creamos una carpeta para ello y ponemos un texto
+
     $ mkdir miweb
+    
     $ echo "<h1>hola</h1>">miweb/index.html
+    
 para ejecutar como antes
+
     $ docker compose up -d
+    
 y en el navegador solo hay que poner en la barra de busqueda de navegacion localhost y el puerto 
 ![image](https://github.com/user-attachments/assets/e45e259b-a570-479b-8b33-363e65d642fd)
 y aqui se puede ver como esta corriendo
@@ -255,7 +296,9 @@ y aqui se puede ver como esta corriendo
 **El comando docker compose**
 desplegar letschat
 arrancamos el contenedor
+
     $ docker compose up -d
+    
 ![image](https://github.com/user-attachments/assets/05c63bac-1498-4fd4-be2b-7d67b35a1614)
 y poner en la barra de busqueda localhost y el puerto
 
@@ -263,7 +306,9 @@ y poner en la barra de busqueda localhost y el puerto
 cremaos un .yml como en el ejemplo
 ![image](https://github.com/user-attachments/assets/c91792fc-9fea-4916-95ac-903663085429)
 lo arrancamos como siempre
+
     $ docker compose up -d
+    
 ![image](https://github.com/user-attachments/assets/af796576-d374-4fe0-84cb-f0b6d429e902)
 
 
@@ -334,8 +379,11 @@ por lo visto hay que esperar unos 30 minutos por el reloj de docker he estado le
 se me creo al fin 
 ![image](https://github.com/user-attachments/assets/b665164d-827a-4a63-915c-d7b8ee9dadc3)
 tuve que hacer un 
+
     $ sudo apt install ntpdate
+    
     $ sudo ntpdate time.google.com
+    
   para sincronizar la hora
 construimos la imagen
 ![image](https://github.com/user-attachments/assets/97d88298-6c90-4309-93cd-51c14e22530f)

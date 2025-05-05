@@ -55,7 +55,7 @@
 
  # 1- Lleva a cabo la práctica descrita en el primer artículo
 
-   **1.1) parte 1:**
+   ☑️**1.1) parte 1:**
    
    Ejecuta la imagen "hello-world"
    ```
@@ -65,7 +65,7 @@
    
    ![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/zdoc.png)
    
-   **1.2) parte 2:**
+   ☑️**1.2) parte 2:**
    
    Muestra las imágenes Docker instaladas
    ```
@@ -75,7 +75,7 @@
    
    ![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/yim.png)
    
-   **1.3) parte 3:**
+   ☑️**1.3) parte 3:**
    
    Muestra los contenedores Docker
 
@@ -89,10 +89,7 @@
    
 # 2 Lleva a cabo la práctica descrita en el segundo artículo
 
-
-
-
-**2.1) Edita el fichero Dockerfile**
+✔️**2.1) Edita el fichero Dockerfile**
 
    crear un directorio para el y acceder a el
 
@@ -109,7 +106,7 @@ dentro de ese directorio crear un archivo sin extension con este contenido
 
 ![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/zzpo.png)
 
-**2.2) Construye el contenedor**
+✔️**2.2) Construye el contenedor**
 
 hay que crear dos archivos un package.json y un src
 
@@ -130,7 +127,7 @@ construimos la imagen
 ![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/zyic.png)
 
 
-**2.3) Ejecútalo**
+✔️**2.3) Ejecútalo**
 
     $ docker run -d -p 3000:3000 josepepe313/mi_app:1.0
 

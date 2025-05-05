@@ -87,7 +87,7 @@
 
    
    
-**2) Lleva a cabo la práctica descrita en el segundo artículo**
+# 2 Lleva a cabo la práctica descrita en el segundo artículo
 
 
 
@@ -156,9 +156,10 @@ Subir la imagen a Docker Hub:
 
 **-----------------------------ACTIVIDAD 3-----------------------------------------------------**
 
-para descargar la imagen ubuntu como menciona el enunciado poner en la terminal
+**1) para descargar la imagen ubuntu como menciona el enunciado poner en la terminal**
 
     $ docker pull ubuntu y para las demas igual solo que sustitullendo el nombre de ubuntu
+**2) para descargar la imagen de hello-world**
 
     $ docker pull hello-world
     $ docker pull nginx

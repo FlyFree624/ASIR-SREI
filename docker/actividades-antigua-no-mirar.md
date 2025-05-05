@@ -40,7 +40,7 @@
 
   
 
-**-----------------------------ACTIVIDAD 2-----------------------------------------------------**
+# **-----------------------------ACTIVIDAD 2------------------------------------------**
 
  # 1- Lleva a cabo la práctica descrita en el primer artículo
    ☑️ **1.1) parte 1:**   
@@ -69,64 +69,43 @@
 ✔️ **2.1) Edita el fichero Dockerfile**
    crear un directorio para el y acceder a el
        $ mkdir mi_app && cd mi_app
-
 dentro de ese directorio crear un archivo sin extension con este contenido
-
     FROM node:lts-alpine
     WORKDIR /app
     COPY . .
     RUN npm install
     EXPOSE 3000
     CMD ["node", "src/index.js"]
-
 ![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/zzpo.png)
 
 ✔️ **2.2) Construye el contenedor**
-
 hay que crear dos archivos un package.json y un src
-
 package.joson
-
 *ejecutar npm init y seguir las preguntas que te hacen*
-
 crear el directorio src
-
       $ mkdir src && touch src/index.js
-
 y dentro del src poner un codigo de prueba
-
 construimos la imagen
-
       $ docker build -t josepepe313/mi_app:1.0 .
-
 ![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/zyic.png)
 
 
 ✔️ **2.3) Ejecútalo**
-
     $ docker run -d -p 3000:3000 josepepe313/mi_app:1.0
-
 ![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/zzpssso.png)
-
 
 ✔️ **2.4) crearse una cuenta en docker hub**
 
-
 ✔️ **2.5) Publícalo**
-
     $ docker login
 ![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/yyrrr.png)
-
 Etiquetar la imagen
-
     $ docker tag mi_app:1.0 josepepe313/mi_app:1.0
-
 Subir la imagen a Docker Hub:
-
     $ docker push josepepe313/mi_app:1.0
 
 
-**-----------------------------ACTIVIDAD 3-----------------------------------------------------**
+# **-----------------------------ACTIVIDAD 3----------------------------------------**
 
 ▶️ **1) para descargar la imagen ubuntu como menciona el enunciado poner en la terminal**
 

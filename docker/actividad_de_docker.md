@@ -17,51 +17,58 @@ instalamos los paquetes
 
 importamos la clave GPG de Docker:
 
-  curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+    curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
 
   ![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/zgpg.png)
 
 añadir repositorio estable
 
-  echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/debian $(lsb_release -cs) stable" | sudo tee   /etc/apt/sources.list.d/docker.list > /dev/null
+    echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/debian $(lsb_release -cs) stable" | sudo tee        /etc/apt/sources.list.d/docker.list > /dev/null
+
 
 instalamos docker
 
-  sudo apt install docker-ce docker-ce-cli containerd.io -y
+    sudo apt install docker-ce docker-ce-cli containerd.io -y
 
   ![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/zindoc.png)
 
-  Habilitamos y arrancamos el servicio de Docker
+Habilitamos y arrancamos el servicio de Docker
 
-  sudo systemctl enable docker
-  sudo systemctl start docker
+    sudo systemctl enable docker
+    sudo systemctl start docker
 
   ![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/yhabi.png)
 
+  
+
 **-----------------------------ACTIVIDAD 2-----------------------------------------------------**
+
+
  **Lleva a cabo la práctica descrita en el primer artículo**
 
-   parte 1:
+   **parte 1:**
+   
    Ejecuta la imagen "hello-world"
    
-   docker run hello-world
+     docker run hello-world
    
    ![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/zdoc.png)
    
-   parte 2:
+   **parte 2:**
+   
    Muestra las imágenes Docker instaladas
    
-   docker images
+     docker images
    
    ![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/yim.png)
    
-   parte 3:
+   **parte 3:**
    
    Muestra los contenedores Docker
 
-   docker ps (este muestra solo los activos)
+     docker ps (este muestra solo los activos)
 
-   docker ps -a (este muestra todos tanto los activos como los inactivos)
+     docker ps -a (este muestra todos tanto los activos como los inactivos)
 
    ![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/ydocc.png)
 

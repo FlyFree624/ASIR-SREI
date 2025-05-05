@@ -110,13 +110,13 @@ package.joson
 
 crear el directorio src
 
-  mkdir src && touch src/index.js
+    mkdir src && touch src/index.js
 
 y dentro del src poner un codigo de prueba
 
 construimos la imagen
 
-  docker build -t josepepe313/mi_app:1.0 .
+    docker build -t josepepe313/mi_app:1.0 .
 
 ![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/zyic.png)
 
@@ -124,7 +124,7 @@ construimos la imagen
 
 Ejecútalo
 
-docker run -d -p 3000:3000 josepepe313/mi_app:1.0
+  docker run -d -p 3000:3000 josepepe313/mi_app:1.0
 
 ![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/zzpssso.png)
 

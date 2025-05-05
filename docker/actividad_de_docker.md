@@ -3,7 +3,7 @@
   **intalar docker**
   primero hacemos un update
 
-  sudo apt update
+    sudo apt update
   
 ![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/widd.png)
 
@@ -61,8 +61,11 @@ importamos la clave GPG de Docker:
    docker ps -a (este muestra todos tanto los activos como los inactivos)
 
    ![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/ydocc.png)
+
+   
    
 **Lleva a cabo la práctica descrita en el segundo artículo**
+
 paso 4:
   **crearse una cuenta en docker hub**
 

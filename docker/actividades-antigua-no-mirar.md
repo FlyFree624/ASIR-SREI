@@ -54,30 +54,20 @@
    
    Muestra las imágenes Docker instaladas
    ```
-   
      $ docker images
 ```
-   
    ![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/yim.png)
    
    ☑️ **1.3) parte 3:**
-   
    Muestra los contenedores Docker
-
      $ docker ps (este muestra solo los activos)
-
      $ docker ps -a (este muestra todos tanto los activos como los inactivos)
-
    ![](https://github.com/FlyFree624/ASIR-SREI/blob/main/tema0/imagenes/ydocc.png)
-
    
    
 # 2 Lleva a cabo la práctica descrita en el segundo artículo
-
 ✔️ **2.1) Edita el fichero Dockerfile**
-
    crear un directorio para el y acceder a el
-
        $ mkdir mi_app && cd mi_app
 
 dentro de ese directorio crear un archivo sin extension con este contenido

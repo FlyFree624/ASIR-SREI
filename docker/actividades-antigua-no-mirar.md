@@ -109,6 +109,7 @@ Subir la imagen a Docker Hub:
 # **-----------------------------ACTIVIDAD 3---------------------------------**
 
 ▶️ **1) para descargar la imagen ubuntu como menciona el enunciado poner en la terminal**
+
     $ docker pull ubuntu y para las demas igual solo que sustitullendo el nombre de ubuntu
     
 ▶️ **2) para descargar la imagen de hello-world**

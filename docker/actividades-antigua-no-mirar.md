@@ -2,7 +2,7 @@
 
   **intalar docker**
   
-1)  primero hacemos un update
+1)  [primero hacemos un update]
 
     sudo apt update
   
